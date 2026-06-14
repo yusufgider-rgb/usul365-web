@@ -4,20 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>USUL365 - Windows Tools</title>
+<link rel="icon" type="image/jpeg" href="usul365_logo.jpeg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Space Grotesk',sans-serif;background:#0a0a0a;color:#f0ede6;min-height:100vh;position:relative;overflow-x:hidden}
+body{font-family:'Space Grotesk',sans-serif;background:#0a0a0a;color:#f0ede6;min-height:100vh;overflow-x:hidden}
 .grid-bg{position:fixed;inset:0;background-image:linear-gradient(rgba(255,255,255,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.025) 1px,transparent 1px);background-size:48px 48px;pointer-events:none;z-index:0}
 .accent{position:fixed;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#5DCAA5,#85B7EB,#AFA9EC,#5DCAA5);z-index:10}
 .wrap{position:relative;z-index:1;max-width:720px;margin:0 auto;padding:60px 28px 64px}
 .badge{display:inline-flex;align-items:center;gap:8px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:#5DCAA5;border:1px solid #1D9E7540;border-radius:20px;padding:6px 14px;margin-bottom:36px}
 .dot{width:7px;height:7px;border-radius:50%;background:#5DCAA5;animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
-.logo-row{display:flex;align-items:baseline;gap:2px;margin-bottom:6px}
-.logo-usul{font-size:56px;font-weight:700;letter-spacing:-2px;color:#f0ede6;line-height:1}
-.logo-365{font-family:'Space Mono',monospace;font-size:38px;font-weight:700;color:#5DCAA5;letter-spacing:-1px;line-height:1}
+.logo-row{display:flex;align-items:center;gap:16px;margin-bottom:6px}
+.logo-img{width:48px;height:48px;object-fit:contain;filter:invert(1)}
+.logo-text{display:flex;align-items:baseline;gap:2px}
+.logo-usul{font-size:52px;font-weight:700;letter-spacing:-2px;color:#f0ede6;line-height:1}
+.logo-365{font-family:'Space Mono',monospace;font-size:36px;font-weight:700;color:#5DCAA5;letter-spacing:-1px;line-height:1}
 .tagline{font-size:12px;color:#444;margin-bottom:44px;letter-spacing:.06em;font-family:'Space Mono',monospace}
 .headline{font-size:28px;font-weight:600;line-height:1.35;color:#f0ede6;margin-bottom:14px;letter-spacing:-.4px}
 .headline span{color:#5DCAA5}
@@ -26,20 +29,22 @@ body{font-family:'Space Grotesk',sans-serif;background:#0a0a0a;color:#f0ede6;min
 .card{background:#111;border:1px solid #222;border-radius:16px;padding:28px;margin-bottom:16px;position:relative;overflow:hidden}
 .card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#5DCAA5,#85B7EB)}
 .card-tag{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#5DCAA5;margin-bottom:10px;display:block}
-.card-name{font-size:22px;font-weight:600;color:#f0ede6;margin-bottom:4px;letter-spacing:-.3px}
+.card-name{font-size:22px;font-weight:600;color:#f0ede6;margin-bottom:4px}
 .card-sub{font-size:13px;color:#5F5E5A;margin-bottom:18px}
 .pills{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:20px}
 .pill{font-size:11px;color:#5DCAA5;background:#0F6E5614;border:1px solid #1D9E7530;border-radius:20px;padding:4px 11px}
+.soon-badge{display:inline-flex;align-items:center;gap:6px;background:#1a1200;border:1px solid #BA751740;border-radius:8px;padding:8px 14px;margin-bottom:20px;font-size:12px;color:#EF9F27}
 .price-row{display:flex;align-items:center;gap:14px;margin-bottom:22px}
 .price{font-family:'Space Mono',monospace;font-size:32px;font-weight:700;color:#f0ede6}
 .price-sub{font-size:11px;color:#5F5E5A;line-height:1.5}
 .btn-row{display:flex;gap:10px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:8px;background:#f0ede6;color:#0a0a0a;font-size:13px;font-weight:600;padding:11px 22px;border-radius:10px;text-decoration:none;cursor:pointer;font-family:'Space Grotesk',sans-serif;transition:opacity .15s}
-.btn:hover{opacity:.85}
-.btn-ghost{background:transparent;color:#888780;border:1px solid #2a2a2a}
-.btn-ghost:hover{border-color:#5DCAA5;color:#5DCAA5}
+.btn{display:inline-flex;align-items:center;gap:8px;background:#2a2a2a;color:#888780;font-size:13px;font-weight:600;padding:11px 22px;border-radius:10px;text-decoration:none;font-family:'Space Grotesk',sans-serif;cursor:not-allowed;border:1px solid #333}
+.video-section{margin-bottom:20px}
+.video-wrap{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;border:1px solid #222}
+.video-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%}
+.video-label{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#5DCAA5;margin-bottom:12px;display:block}
 .links-title{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#444;margin-bottom:14px;margin-top:36px}
-.link-card{display:flex;align-items:center;gap:16px;background:#111;border:1px solid #1e1e1e;border-radius:12px;padding:15px 18px;text-decoration:none;margin-bottom:8px;transition:border-color .15s;cursor:pointer;color:inherit}
+.link-card{display:flex;align-items:center;gap:16px;background:#111;border:1px solid #1e1e1e;border-radius:12px;padding:15px 18px;text-decoration:none;margin-bottom:8px;transition:border-color .15s;color:inherit}
 .link-card:hover{border-color:#333}
 .link-icon{width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px}
 .yt{background:#200000;color:#FF4444}
@@ -50,10 +55,10 @@ body{font-family:'Space Grotesk',sans-serif;background:#0a0a0a;color:#f0ede6;min
 .link-handle{font-family:'Space Mono',monospace;font-size:11px;color:#444;display:block;margin-top:2px}
 .stats{display:flex;gap:32px;margin-top:36px;padding-top:28px;border-top:1px solid #1a1a1a;flex-wrap:wrap}
 .stat-num{font-family:'Space Mono',monospace;font-size:22px;font-weight:700;color:#f0ede6;display:block}
-.stat-label{font-size:11px;color:#444;display:block;margin-top:3px}
-footer{margin-top:56px;padding-top:20px;border-top:1px solid #161616;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.stat-label{font-size:11px;color:#5F5E5A;display:block;margin-top:3px}
+footer{margin-top:56px;padding-top:20px;border-top:1px solid #161616;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 footer span{font-family:'Space Mono',monospace;font-size:10px;color:#333}
-@media(max-width:600px){.logo-usul{font-size:40px}.logo-365{font-size:28px}.headline{font-size:22px}.stats{gap:20px}}
+@media(max-width:600px){.logo-usul{font-size:38px}.logo-365{font-size:26px}.headline{font-size:22px}.stats{gap:20px}}
 </style>
 </head>
 <body>
@@ -61,38 +66,48 @@ footer span{font-family:'Space Mono',monospace;font-size:10px;color:#333}
 <div class="grid-bg"></div>
 <div class="wrap">
 
-<div class="badge"><div class="dot"></div>usul365.com &mdash; istanbul, turkiye</div>
+<div class="badge"><div class="dot"></div>usul365.com — İstanbul, Türkiye</div>
 
 <div class="logo-row">
-  <span class="logo-usul">USUL</span>
-  <span class="logo-365">365</span>
+  <img src="usul365_logo.jpeg" alt="USUL365" class="logo-img">
+  <div class="logo-text">
+    <span class="logo-usul">USUL</span>
+    <span class="logo-365">365</span>
+  </div>
 </div>
 <div class="tagline">Windows Tools &nbsp;&middot;&nbsp; Knowledge Systems &nbsp;&middot;&nbsp; NACE 621000</div>
 
-<div class="headline">Akilli araclar.<br><span>Kalici sonuclar.</span></div>
-<div class="desc">USUL365, Windows kullanicilari icin pratik, guvenilir yazilimlar uretiyor. Klasorlerinizi, dosyalarinizi ve sistem sagliginizi kontrol altinda tutun.</div>
+<div class="headline">Akıllı araçlar.<br><span>Kalıcı sonuçlar.</span></div>
+<div class="desc">USUL365, Windows kullanıcıları için pratik, güvenilir yazılımlar üretiyor. Klasörlerinizi, dosyalarınızı ve sistem sağlığınızı kontrol altında tutun.</div>
 
 <div class="divider"></div>
 
 <div class="card">
-  <span class="card-tag">Urun &middot; v0.9.9 &middot; Microsoft Store</span>
+  <span class="card-tag">Geliştirme Aşamasında &middot; v0.9.9</span>
   <div class="card-name">USUL365 Guard</div>
   <div class="card-sub">Windows Folder Health Monitor</div>
+  <div class="soon-badge">&#9201; Yakında Microsoft Store’da &mdash; Tek seferlik $25</div>
   <div class="pills">
-    <span class="pill">Klasor tarama</span>
+    <span class="pill">Klasör tarama</span>
     <span class="pill">Delta analizi</span>
     <span class="pill">Telemetri</span>
     <span class="pill">Karar matrisi</span>
     <span class="pill">PC bilgisi</span>
     <span class="pill">TR / EN</span>
-    <span class="pill">WACK sertifikali</span>
+    <span class="pill">WACK sertifikalı</span>
   </div>
-  <div class="price-row">
+  <div class="video-section">
+    <span class="video-label">&#9654; Tanıtım videosu</span>
+    <div class="video-wrap">
+      <iframe src="https://www.youtube.com/embed/pIJSnO1HONE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="price-row" style="margin-top:20px">
     <span class="price">$25</span>
-    <span class="price-sub">Microsoft Store<br>tek seferlik odeme</span>
+    <span class="price-sub">Microsoft Store<br>Yakında — Tek seferlik ödeme</span>
   </div>
   <div class="btn-row">
-    <a class="btn" href="https://apps.microsoft.com" target="_blank">&#xe669; Microsoft Store</a>
+    <a class="btn" href="#">&#9632; Yakında Microsoft Store’da</a>
   </div>
 </div>
 
@@ -101,39 +116,51 @@ footer span{font-family:'Space Mono',monospace;font-size:10px;color:#333}
 <a class="link-card" href="https://www.youtube.com/@usul365" target="_blank">
   <div class="link-icon yt">&#9654;</div>
   <div class="link-info">
-    <span class="link-name">YouTube &mdash; Yusuf Gider</span>
+    <span class="link-name">YouTube — Yusuf Gider</span>
     <span class="link-handle">youtube.com/@usul365</span>
   </div>
   <span style="color:#333">&#8594;</span>
 </a>
 
 <a class="link-card" href="https://x.com/yusufgider" target="_blank">
-  <div class="link-icon x">&#120143;</div>
+  <div class="link-icon x">X</div>
   <div class="link-info">
-    <span class="link-name">X &mdash; usul365</span>
+    <span class="link-name">X — usul365</span>
     <span class="link-handle">x.com/yusufgider</span>
   </div>
   <span style="color:#333">&#8594;</span>
 </a>
 
 <a class="link-card" href="https://apps.microsoft.com" target="_blank">
-  <div class="link-icon ms">&#9638;</div>
+  <div class="link-icon ms">W</div>
   <div class="link-info">
-    <span class="link-name">Microsoft Store &mdash; USUL365 Guard</span>
-    <span class="link-handle">$25 &middot; tek seferlik</span>
+    <span class="link-name">Microsoft Store — USUL365 Guard</span>
+    <span class="link-handle">Yakında — $25 tek seferlik</span>
   </div>
   <span style="color:#333">&#8594;</span>
 </a>
 
 <div class="stats">
-  <div><span class="stat-num">5.8K+</span><span class="stat-label">YouTube goruntulenme</span></div>
-  <div><span class="stat-num">64</span><span class="stat-label">video yayinda</span></div>
-  <div><span class="stat-num">1.321</span><span class="stat-label">X gonderisi</span></div>
-  <div><span class="stat-num">2026</span><span class="stat-label">kurulus yili</span></div>
+  <div>
+    <span class="stat-num">5.8K+</span>
+    <span class="stat-label">YouTube<br>görüntülenme</span>
+  </div>
+  <div>
+    <span class="stat-num">64</span>
+    <span class="stat-label">Yayınlanmış<br>video</span>
+  </div>
+  <div>
+    <span class="stat-num">1.321</span>
+    <span class="stat-label">X’te<br>paylaşım</span>
+  </div>
+  <div>
+    <span class="stat-num">2026</span>
+    <span class="stat-label">Kuruluş<br>yılı</span>
+  </div>
 </div>
 
 <footer>
-  <span>&copy; 2026 USUL365 &middot; Yusuf Gider &middot; Istanbul</span>
+  <span>&copy; 2026 USUL365 &middot; Yusuf Gider &middot; İstanbul</span>
   <span>usul365.com</span>
 </footer>
 
