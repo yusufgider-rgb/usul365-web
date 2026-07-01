@@ -115,9 +115,15 @@
   </div>
 
   <div class="counter">
-    <img src="https://visitor-badge.laobi.icu/badge?page_id=usul365.website&left_color=%23111111&right_color=%235DCAA5&left_text=ziyaretçi" alt="ziyaretçi sayacı">
-    <div style="margin-top:16px;font-family:'Space Mono',monospace;font-size:10px;"><a href="gizlilik.html" style="color:#444;text-decoration:none;">Gizlilik Politikası</a></div>
+    <span id="visit-count">— ziyaretçi</span>
+    <div style="margin-top:16px;font-family:'Space Mono',monospace;font-size:10px;"><a href="gizlilik.html" style="color:#7ea2ff;text-decoration:none;">Gizlilik Politikası</a></div>
   </div>
+  <script>
+    fetch('https://countapi.mileshilliard.com/api/v1/hit/usul365_com_visits')
+      .then(r => r.json())
+      .then(d => { document.getElementById('visit-count').textContent = d.value + ' ziyaretçi'; })
+      .catch(() => { document.getElementById('visit-count').textContent = ''; });
+  </script>
 </div>
 </body>
 </html>
