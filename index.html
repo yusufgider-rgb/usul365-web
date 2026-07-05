@@ -73,6 +73,7 @@
   .link-info { flex: 1; text-align: left; }
   .link-name { font-size: 14px; font-weight: 500; display: block; }
   .link-handle { font-family: 'Space Mono', monospace; font-size: 11px; color: #555; display: block; margin-top: 2px; }
+  .link-stat { font-family: 'Space Mono', monospace; font-size: 10px; color: #4f8cff; display: block; margin-top: 2px; opacity: .8; }
   .arrow { color: #333; }
   .counter {
     font-family: 'Space Mono', monospace;
@@ -88,47 +89,52 @@
   <img class="logo" src="usul365_logo.jpeg" alt="USUL365">
 
   <div class="links">
-    <a class="link-card" href="https://www.youtube.com/@usul365" target="_blank" rel="noopener">
+    <a class="link-card" id="lnk-yt" href="https://www.youtube.com/@usul365" target="_blank" rel="noopener">
       <div class="link-icon yt">&#9654;</div>
       <div class="link-info">
         <span class="link-name">YouTube — Yusuf Gider</span>
         <span class="link-handle">youtube.com/@usul365</span>
+        <span class="link-stat" id="stat-yt"></span>
       </div>
       <span class="arrow">&#8594;</span>
     </a>
 
-    <a class="link-card" href="https://x.com/usul365" target="_blank" rel="noopener">
+    <a class="link-card" id="lnk-x" href="https://x.com/usul365" target="_blank" rel="noopener">
       <div class="link-icon x">X</div>
       <div class="link-info">
         <span class="link-name">X — usul365</span>
         <span class="link-handle">x.com/usul365</span>
+        <span class="link-stat" id="stat-x"></span>
       </div>
       <span class="arrow">&#8594;</span>
     </a>
 
-    <a class="link-card" href="https://apps.microsoft.com/detail/9pf0xqkv3dft?hl=tr-TR&gl=TR" target="_blank" rel="noopener">
+    <a class="link-card" id="lnk-guard" href="https://apps.microsoft.com/detail/9pf0xqkv3dft?hl=tr-TR&gl=TR" target="_blank" rel="noopener">
       <div class="link-icon ms">W</div>
       <div class="link-info">
         <span class="link-name">Microsoft Store — USUL365 Guard</span>
         <span class="link-handle">Yayında</span>
+        <span class="link-stat" id="stat-guard"></span>
       </div>
       <span class="arrow">&#8594;</span>
     </a>
 
-    <a class="link-card" href="/oyunlar/blok-dusur/">
+    <a class="link-card" id="lnk-blok" href="/oyunlar/blok-dusur/">
       <div class="link-icon g1">&#9646;</div>
       <div class="link-info">
         <span class="link-name">Oyun — Blok Düşür</span>
         <span class="link-handle">usul365.com/oyunlar/blok-dusur</span>
+        <span class="link-stat" id="stat-blok"></span>
       </div>
       <span class="arrow">&#8594;</span>
     </a>
 
-    <a class="link-card" href="/oyunlar/yilan/">
+    <a class="link-card" id="lnk-yilan" href="/oyunlar/yilan/">
       <div class="link-icon g2">&#8776;</div>
       <div class="link-info">
         <span class="link-name">Oyun — Yılan</span>
         <span class="link-handle">usul365.com/oyunlar/yilan</span>
+        <span class="link-stat" id="stat-yilan"></span>
       </div>
       <span class="arrow">&#8594;</span>
     </a>
@@ -167,6 +173,37 @@
       pixel.onerror = function(){
         document.getElementById('visit-count').textContent = '';
       };
+    })();
+
+    (function(){
+      var sahibim = localStorage.getItem('usul365_sahip') === '1';
+      var gosterAnahtar = {
+        'stat-yt': ['usul365_click_youtube', 'tıklama'],
+        'stat-x': ['usul365_click_x', 'tıklama'],
+        'stat-guard': ['usul365_click_guard', 'tıklama'],
+        'stat-blok': ['usul365_oyun_blokdusur_visits', 'ziyaret'],
+        'stat-yilan': ['usul365_oyun_yilan_visits', 'ziyaret']
+      };
+      Object.keys(gosterAnahtar).forEach(function(elId){
+        var anahtar = gosterAnahtar[elId][0], etiket = gosterAnahtar[elId][1];
+        fetch('https://countapi.mileshilliard.com/api/v1/get/' + anahtar)
+          .then(function(r){ return r.json(); })
+          .then(function(d){
+            var el = document.getElementById(elId);
+            if (el) el.textContent = d.value + ' ' + etiket;
+          })
+          .catch(function(){});
+      });
+
+      if (!sahibim) {
+        var tiklamaAnahtar = { 'lnk-yt': 'usul365_click_youtube', 'lnk-x': 'usul365_click_x', 'lnk-guard': 'usul365_click_guard' };
+        Object.keys(tiklamaAnahtar).forEach(function(linkId){
+          var a = document.getElementById(linkId);
+          if (a) a.addEventListener('click', function(){
+            new Image().src = 'https://countapi.mileshilliard.com/api/v1/hit/' + tiklamaAnahtar[linkId];
+          });
+        });
+      }
     })();
   </script>
 </div>
