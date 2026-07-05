@@ -119,11 +119,21 @@
     <div style="margin-top:16px;font-family:'Space Mono',monospace;font-size:10px;"><a href="gizlilik.html" style="color:#7ea2ff;text-decoration:none;">Gizlilik Politikası</a></div>
   </div>
   <script>
-    fetch('https://countapi.mileshilliard.com/api/v1/hit/usul365_com_visits')
-      .then(r => r.json())
-      .then(d => { document.getElementById('visit-count').textContent = d.value + ' ziyaretçi'; })
-      .catch(() => { document.getElementById('visit-count').textContent = ''; });
+    (function(){
+      var params = new URLSearchParams(location.search);
+      if (params.get('ben') === '1') { localStorage.setItem('usul365_sahip', '1'); }
+      var sahibim = localStorage.getItem('usul365_sahip') === '1';
+      if (sahibim) {
+        document.getElementById('visit-count').textContent = '(sahip modu - sayilmiyor)';
+        return;
+      }
+      fetch('https://countapi.mileshilliard.com/api/v1/hit/usul365_com_visits')
+        .then(r => r.json())
+        .then(d => { document.getElementById('visit-count').textContent = d.value + ' ziyaretçi'; })
+        .catch(() => { document.getElementById('visit-count').textContent = ''; });
+    })();
   </script>
 </div>
 </body>
 </html>
+

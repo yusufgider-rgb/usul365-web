@@ -415,7 +415,13 @@
   newBoard();
   resize();
 
-  fetch('https://countapi.mileshilliard.com/api/v1/hit/usul365_oyun_blokdusur_visits').catch(function(){});
+  (function(){
+    var params = new URLSearchParams(location.search);
+    if (params.get('ben') === '1') { localStorage.setItem('usul365_sahip', '1'); }
+    if (localStorage.getItem('usul365_sahip') !== '1') {
+      fetch('https://countapi.mileshilliard.com/api/v1/hit/usul365_oyun_blokdusur_visits').catch(function(){});
+    }
+  })();
 })();
 </script>
 </body>
