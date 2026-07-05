@@ -156,10 +156,17 @@
           .catch(() => {});
         return;
       }
-      fetch('https://countapi.mileshilliard.com/api/v1/hit/usul365_com_visits')
-        .then(r => r.json())
-        .then(d => { document.getElementById('visit-count').textContent = d.value + ' ziyaretçi'; })
-        .catch(() => { document.getElementById('visit-count').textContent = ''; });
+      var pixel = new Image();
+      pixel.src = 'https://countapi.mileshilliard.com/api/v1/hit/usul365_com_visits';
+      pixel.onload = function(){
+        fetch('https://countapi.mileshilliard.com/api/v1/get/usul365_com_visits')
+          .then(r => r.json())
+          .then(d => { document.getElementById('visit-count').textContent = d.value + ' ziyaretçi'; })
+          .catch(() => { document.getElementById('visit-count').textContent = ''; });
+      };
+      pixel.onerror = function(){
+        document.getElementById('visit-count').textContent = '';
+      };
     })();
   </script>
 </div>
