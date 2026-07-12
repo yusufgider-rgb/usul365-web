@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>USUL365 Blok - Istatistikler</title>
+<style>
+  * { box-sizing: border-box; }
+  body { background:#060810; color:#eef0f6; font-family:system-ui,sans-serif; margin:0; padding:32px 16px; }
+  .wrap { max-width: 900px; margin:0 auto; }
+  a.back { color:#9aa1b5; text-decoration:none; font-size:14px; }
+  h1 { color:#2ee6d6; }
+  .tabs { display:flex; gap:8px; margin:20px 0; }
+  .tab { background:#151b2b; border:1px solid #2a3145; color:#eef0f6; border-radius:8px; padding:8px 16px; cursor:pointer; }
+  .tab.selected { background:#2ee6d6; color:#06080f; font-weight:700; }
+  table { width:100%; border-collapse: collapse; margin-top:16px; }
+  th, td { text-align:left; padding:10px 12px; border-bottom:1px solid #2a3145; }
+  th { color:#9aa1b5; font-size:13px; text-transform:uppercase; letter-spacing:.04em; }
+  td { font-size:14px; }
+  tr:nth-child(1) td { color:#2ee6d6; font-weight:700; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="index.html">&#8592; Oyuna don</a>
+  <h1>Istatistikler</h1>
+  <div class="tabs">
+    <div class="tab selected" data-diff="kolay">Kolay</div>
+    <div class="tab" data-diff="normal">Normal</div>
+    <div class="tab" data-diff="usta">Usta</div>
+  </div>
+  <table>
+    <thead><tr><th>#</th><th>Oyuncu</th><th>En Yuksek Skor</th><th>Toplam Oyun</th><th>Son Oynama</th></tr></thead>
+    <tbody id="tabloGovde"><tr><td colspan="5">Yukleniyor...</td></tr></tbody>
+  </table>
+</div>
+<script>
+var JSONBIN_BIN_ID = '6a53f60ff5f4af5e2985454e';
+var JSONBIN_API_KEY = '$2a$10$NO0cAF/OlX2dG3CPqJ78P.1JBTXFYAbEhVn1Bnvtfn5uTwPh0KM4m';
+var aktifSekme = 'kolay';
+
+async function veriYukle(diff){
+  aktifSekme = diff;
+  document.querySelectorAll('.tab').forEach(function(t){
+    t.classList.toggle('selected', t.getAttribute('data-diff') === diff);
+  });
+  var govde = document.getElementById('tabloGovde');
+  govde.innerHTML = '<tr><td colspan="5">Yukleniyor...</td></tr>';
+  try {
+    var res = await fetch('https://api.jsonbin.io/v3/b/' + JSONBIN_BIN_ID + '/latest', {
+      headers: { 'X-Access-Key': JSONBIN_API_KEY }
+    });
+    var data = await res.json();
+    var kayitlar = (data.record || []).filter(function(k){ return k.diff === diff; });
+
+    var oyuncuBazinda = {};
+    kayitlar.forEach(function(k){
+      var anahtar = k.userId || k.name;
+      if (!oyuncuBazinda[anahtar] || k.score > oyuncuBazinda[anahtar].enYuksek) {
+        if (!oyuncuBazinda[anahtar]) oyuncuBazinda[anahtar] = { name: k.name, enYuksek: 0, toplamOyun: 0, sonTarih: k.tarih };
+        oyuncuBazinda[anahtar].enYuksek = Math.max(oyuncuBazinda[anahtar].enYuksek, k.score);
+      }
+      oyuncuBazinda[anahtar].toplamOyun = (oyuncuBazinda[anahtar].toplamOyun || 0) + 1;
+      if (new Date(k.tarih) > new Date(oyuncuBazinda[anahtar].sonTarih)) oyuncuBazinda[anahtar].sonTarih = k.tarih;
+    });
+
+    var liste = Object.values(oyuncuBazinda).sort(function(a,b){ return b.enYuksek - a.enYuksek; });
+
+    govde.innerHTML = '';
+    if (!liste.length){
+      govde.innerHTML = '<tr><td colspan="5">Henuz kayit yok.</td></tr>';
+      return;
+    }
+    liste.forEach(function(o, i){
+      var tr = document.createElement('tr');
+      var tarihStr = new Date(o.sonTarih).toLocaleDateString('tr-TR');
+      tr.innerHTML = '<td>' + (i+1) + '</td><td>' + o.name + '</td><td>' + o.enYuksek + '</td><td>' + o.toplamOyun + '</td><td>' + tarihStr + '</td>';
+      govde.appendChild(tr);
+    });
+  } catch(e){
+    govde.innerHTML = '<tr><td colspan="5">Veri yuklenemedi.</td></tr>';
+  }
+}
+
+document.querySelectorAll('.tab').forEach(function(t){
+  t.addEventListener('click', function(){ veriYukle(t.getAttribute('data-diff')); });
+});
+
+veriYukle('kolay');
+</script>
+</body>
+</html>
+
