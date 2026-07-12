@@ -704,6 +704,11 @@
     ytgame.game.firstFrameReady();
     ytgame.game.gameReady();
   }
+
+  if (typeof ytgame === 'undefined' || !ytgame.IN_PLAYABLES_ENV) {
+    document.getElementById('leaderboardBox').style.display = 'block';
+    loadLeaderboard('kolay');
+  }
 })();
   document.querySelectorAll('.diffBtn').forEach(function(btn){
     btn.addEventListener('click', function(){
@@ -798,10 +803,16 @@
     ytgame.game.firstFrameReady();
     ytgame.game.gameReady();
   }
+
+  if (typeof ytgame === 'undefined' || !ytgame.IN_PLAYABLES_ENV) {
+    document.getElementById('leaderboardBox').style.display = 'block';
+    loadLeaderboard('kolay');
+  }
 })();
 </script>
 </body>
 </html>
+
 
 
 
