@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>USUL365 Guard - Yardim ve Kullanim Kilavuzu</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    background: #060810;
+    color: #eef0f6;
+    font-family: system-ui, sans-serif;
+    margin: 0;
+    line-height: 1.7;
+  }
+  .wrap { max-width: 780px; margin: 0 auto; padding: 40px 20px 80px; }
+  .back { color: #9aa1b5; text-decoration: none; font-size: 14px; }
+  .back:hover { color: #eef0f6; }
+  h1 { font-size: 28px; margin: 24px 0 8px; }
+  .subtitle { color: #9aa1b5; margin-bottom: 40px; }
+  .toc {
+    background: #151b2b; border: 1px solid #2a3145; border-radius: 12px;
+    padding: 20px 24px; margin-bottom: 40px;
+  }
+  .toc h2 { font-size: 15px; margin: 0 0 10px; color: #9aa1b5; text-transform: uppercase; letter-spacing: 0.05em; }
+  .toc ol { margin: 0; padding-left: 20px; }
+  .toc a { color: #6fd4a8; text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+  section { margin: 40px 0; scroll-margin-top: 20px; }
+  h2 { font-size: 20px; color: #6fd4a8; border-bottom: 1px solid #2a3145; padding-bottom: 8px; }
+  h3 { font-size: 15px; color: #eef0f6; margin-top: 20px; }
+  p { color: #cdd2e0; }
+  .step {
+    background: #10141f; border: 1px solid #2a3145; border-radius: 10px;
+    padding: 14px 18px; margin: 10px 0;
+  }
+  .step b { color: #6fd4a8; }
+  .note {
+    background: #1a1600; border: 1px solid #4a3f10; border-radius: 10px;
+    padding: 14px 18px; margin: 16px 0; color: #e0c85a;
+  }
+  .safe {
+    background: #001a10; border: 1px solid #10402a; border-radius: 10px;
+    padding: 14px 18px; margin: 16px 0; color: #6fd4a8;
+  }
+  footer { text-align: center; color: #6b7180; font-size: 13px; margin-top: 60px; }
+  footer a { color: #9aa1b5; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="index.html">&#8592; USUL365 Guard urun sayfasi</a>
+  <h1>USUL365 Guard - Yardim ve Kullanim Kilavuzu</h1>
+  <p class="subtitle">Guard'i ilk kez kullananlar icin adim adim, detayli anlatim.</p>
+
+  <div class="toc">
+    <h2>Icindekiler</h2>
+    <ol>
+      <li><a href="#kurulum">Kurulum ve Ilk Acilis</a></li>
+      <li><a href="#genel-bakis">Genel Bakis Sayfasini Okumak</a></li>
+      <li><a href="#tarama">Tarama Nasil Yapilir</a></li>
+      <li><a href="#tedavi">Tedavi (Safe-Harness) Nasil Calisir</a></li>
+      <li><a href="#uygulama-envanteri">Uygulama Envanteri</a></li>
+      <li><a href="#donanim">Donanim Envanteri ve Guncelleme Rehberi</a></li>
+      <li><a href="#gizlilik">Gizlilik ve Veri Guvenligi</a></li>
+      <li><a href="#sss">Sikca Sorulan Sorular</a></li>
+    </ol>
+  </div>
+
+  <section id="kurulum">
+    <h2>1. Kurulum ve Ilk Acilis</h2>
+    <p>Microsoft Store'dan USUL365 Guard'i indirip yukleyin. Uygulama otomatik
+    olarak Turkce veya Ingilizce arayuzle acilir (sol alttaki Dil secicisinden
+    degistirebilirsiniz).</p>
+    <p>Ilk actiginizda hicbir tarama otomatik baslamaz - sadece elinizdeki
+    mevcut/hizli verilerden bir Genel Bakis skoru hesaplanir. PC'niz uzerinde
+    herhangi bir agir islem, siz onaylamadan yapilmaz.</p>
+  </section>
+
+  <section id="genel-bakis">
+    <h2>2. Genel Bakis Sayfasini Okumak</h2>
+    <p>Uygulamayi actiginizda karsiniza cikan ilk ekran budur. Ustte buyuk bir
+    sayi olarak <b>Genel Sistem Skorunuzu</b> gorursunuz (0-100 arasi).</p>
+    <p>Altinda bes kategori kart halinde, en dusuk skordan en yuksege siralanmis
+    sekilde listelenir:</p>
+    <div class="step"><b>Program Yuku</b> - Kurulu programlarinizin toplam disk kullanimi.</div>
+    <div class="step"><b>Disk ve Dosya Sagligi</b> - Son tarama sonucunuz ve bekleyen temizlik onerileri.</div>
+    <div class="step"><b>Windows ve Guvenlik</b> - Windows Defender durumu.</div>
+    <div class="step"><b>Sistem Kaynaklari</b> - Diskinizde ne kadar bos alan oldugu.</div>
+    <div class="step"><b>Uygulama Boyutu</b> - Store uygulamalarinizin yerel veri boyutu.</div>
+    <p>Bir karta tikladiginizda otomatik olarak ilgili detay sayfasina (Tarama
+    veya Uygulama Envanteri) gecersiniz.</p>
+  </section>
+
+  <section id="tarama">
+    <h2>3. Tarama Nasil Yapilir</h2>
+    <p>Sol menudeki <b>Tarama</b> sekmesine gidin.</p>
+    <div class="step">1. <b>Klasor</b> alanina taramak istediginiz klasorun yolunu yazin veya "Sec" butonuyla secin.</div>
+    <div class="step">2. <b>Top N</b> - sonuc listesinde kac dosya gorunecegini belirler (varsayilan 10).</div>
+    <div class="step">3. <b>Uyari MB</b> - hangi boyuttan buyuk dosyalarin "buyuk dosya" sayilacagini belirler.</div>
+    <div class="step">4. <b>Taramaya Basla</b> butonuna tiklayin.</div>
+    <p>Tarama bitince dosya sayisi, toplam boyut, saglik skoru gibi ozet
+    bilgileri ve en buyuk dosyalarin listesini gorursunuz.</p>
+    <div class="safe">
+      Onemli: Sistem dosyalari (Windows, Program Files, vb.) ve sizin
+      "korumali" olarak isaretlediginiz dosyalar tarama sonuclarina hic
+      dahil edilmez - bunlar temizlik onerisi olarak asla karsiniza cikmaz.
+    </div>
+  </section>
+
+  <section id="tedavi">
+    <h2>4. Tedavi (Safe-Harness) Nasil Calisir</h2>
+    <p>Tarama sirasinda bulunan buyuk dosyalar otomatik olarak <b>Tedavi</b>
+    sekmesinde "Bekleyen" (PENDING) oneri olarak belirir. Bu asamada
+    hicbir dosya henuz degismemistir.</p>
+    <div class="step"><b>Adim 1 - Dry-Run Simule Et:</b> Bu butona bastiginizda Guard, dosyanin gercekten var olup olmadigini, tasima izniniz olup olmadigini kontrol eder ve hedef arsiv yolunu gosterir. Bu tamamen bir simulasyondur, dosyaya dokunulmaz.</div>
+    <div class="step"><b>Adim 2 - Onayla Uygula:</b> Sadece Dry-Run basarili oldugunda aktif olur. Bu butona bastiginizda dosya GERCEKTEN, tarihli bir arsiv klasorune tasinir (silinmez).</div>
+    <div class="step"><b>Adim 3 - Geri Yukle:</b> Tasidiginiz bir dosyayi pisman olursaniz, ayni islemi secip "Geri Yukle" butonuyla dosyayi eski konumuna tek tikla dondurebilirsiniz.</div>
+    <div class="safe">
+      Guard'in temel guvenlik prensibi: sizin onayiniz olmadan HICBIR dosya
+      silinmez veya tasinmaz. Her islem kayit altindadir ve geri alinabilir.
+    </div>
+  </section>
+
+  <section id="uygulama-envanteri">
+    <h2>5. Uygulama Envanteri</h2>
+    <p>Bu sekme, kurulu Microsoft Store uygulamalarinizin ve klasik (Win32)
+    programlarinizin ne kadar yer kapladigini gosterir. "Tara" butonuna
+    basarak guncel bir envanter cikarabilirsiniz.</p>
+    <p>Yerel verisi anormal buyumus uygulamalar icin (orn. onbellek/log
+    birikmesi) sade bir Turkce tavsiye metni sunulur. Bu sekme sadece
+    bilgi verir - hicbir programi otomatik olarak kaldirmaz veya
+    degistirmez.</p>
+  </section>
+
+  <section id="donanim">
+    <h2>6. Donanim Envanteri ve Guncelleme Rehberi</h2>
+    <p>Bu sekmede islemcinizi, ekran kartinizi, bellegini, depolamanizi, ag
+    kartinizi ve BIOS'unuzu gorursunuz. Her bilesenin yaninda kendi
+    0-100 skoru ve surucusunun/BIOS'unun guncel olup olmadigina dair net
+    bir etiket bulunur:</p>
+    <div class="step">[GUNCEL] - surucu/BIOS yakin zamanda guncellenmis.</div>
+    <div class="step">[GUNCELLEME ONERILIR] - eski gorunuyor, kontrol etmenizde fayda var.</div>
+    <p>Guncelleme onerilen bilesenlerin altinda, ne yapmaniz gerektigini
+    anlatan adimlar ve dogrudan Aygit Yoneticisi'ni veya uretici
+    destek sayfasini acan butonlar bulunur - teknik bilgisi olmayan
+    kullanicilar icin bile takip edilebilir.</p>
+    <p>Sayfanin altinda ayrica <b>Windows Update'i Ac</b> ve
+    <b>Microsoft Store Guncellemelerini Ac</b> butonlari vardir - bunlar
+    dogrudan ilgili Windows ekranini acar, Guard hicbir guncellemeyi
+    sizin adiniza otomatik yapmaz.</p>
+    <div class="note">
+      BIOS guncellemeleri dikkatli yapilmalidir - yarida kesilen veya
+      yanlis bir BIOS guncellemesi riskli olabilir. Guard size sadece
+      dogru resmi kaynaklara giden yonlendirmeyi yapar, hicbir BIOS
+      dosyasini kendisi indirmez veya yuklemez.
+    </div>
+  </section>
+
+  <section id="gizlilik">
+    <h2>7. Gizlilik ve Veri Guvenligi</h2>
+    <p>USUL365 Guard tamamen yerel calisir. Taradiginiz dosyalarin icerigi,
+    bilgisayarinizdaki program listesi, donanim bilgileriniz - hicbiri
+    internete gonderilmez. Tum veriler sadece kendi bilgisayarinizda,
+    yerel bir veritabaninda saklanir.</p>
+    <p>Detayli bilgi icin <a href="/gizlilik.html" style="color:#6fd4a8;">Gizlilik Politikamiza</a> goz atabilirsiniz.</p>
+  </section>
+
+  <section id="sss">
+    <h2>8. Sikca Sorulan Sorular</h2>
+    <h3>Guard bilgisayarimi yavaslatir mi?</h3>
+    <p>Hayir. Guard sadece siz tarama baslattiginizda calisir, arka planda
+    surekli calisan bir surec degildir.</p>
+    <h3>Tasidigim bir dosyayi tamamen kaybedebilir miyim?</h3>
+    <p>Hayir. Tasinan dosyalar silinmez, tarihli bir arsiv klasorune
+    kopyalanir ve istediginiz an "Geri Yukle" ile eski yerine
+    donduruluebilir.</p>
+    <h3>Guard'in onerdigi her seyi onaylamak zorunda miyim?</h3>
+    <p>Hayir. Her oneri sadece bir onerdir - "Reddet" butonuyla
+    reddedebilir veya hicbir islem yapmadan birakabilirsiniz.</p>
+    <h3>Guard duzenli guncelleniyor mu?</h3>
+    <p>Evet. USUL365 Guard aktif gelistirme asamasindadir, Microsoft Store
+    uzerinden duzenli olarak yeni ozellikler ve iyilestirmeler
+    alacaksiniz.</p>
+  </section>
+
+  <footer>
+    &copy; 2026 USUL365 &middot; <a href="/gizlilik.html">Gizlilik Politikasi</a> &middot; <a href="index.html">Guard Urun Sayfasi</a>
+  </footer>
+</div>
+</body>
+</html>
