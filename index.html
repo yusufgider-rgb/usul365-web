@@ -158,13 +158,13 @@
       if (params.get('ben') === '1') { localStorage.setItem('usul365_sahip', '1'); }
       var sahibim = localStorage.getItem('usul365_sahip') === '1';
       if (sahibim) {
-        document.getElementById('visit-count').textContent = '(sahip modu - sayılmıyor)';
+        document.getElementById('visit-count').style.display = 'none';
         fetch('https://countapi.mileshilliard.com/api/v1/get/usul365_com_visits')
           .then(r => r.json())
           .then(d => {
             var el = document.createElement('div');
             el.style.marginTop = '4px';
-            el.textContent = 'Şu an: ' + d.value + ' ziyaretçi';
+            el.textContent = 'Toplam ' + d.value + ' ziyaretçi';
             document.getElementById('visit-count').after(el);
           })
           .catch(() => {});
