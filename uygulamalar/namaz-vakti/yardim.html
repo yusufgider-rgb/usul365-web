@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USUL365 Namaz Vakti — Kullanım Kılavuzu</title>
+<meta name="description" content="USUL365 Namaz Vakti kullanım kılavuzu: başlarken, vakitlerin hesaplanması, hicrî takvim ve kandiller, görünüm ve bildirimler, güncellemeler.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FAF8F3;--kart:#FFFFFF;--cizgi:#EAE4D8;--metin:#2B2B2B;
+      --soluk:#8A8A8A;--altin:#C9A227;--mavi:#4A6FA5}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--metin);line-height:1.7;
+     font-family:"Segoe UI",system-ui,-apple-system,sans-serif}
+.sarmal{max-width:820px;margin:0 auto;padding:40px 20px 60px}
+.ust{font-family:"Space Mono",monospace;font-size:11px;margin-bottom:24px}
+.ust a{color:var(--mavi);text-decoration:none}
+h1{font-size:28px;margin:0 0 4px}
+.alt{color:var(--soluk);font-size:14px;margin:0 0 24px}
+nav{background:var(--kart);border:1px solid var(--cizgi);border-radius:14px;
+    padding:14px 18px;margin-bottom:12px}
+nav b{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:1.2px;
+      text-transform:uppercase;color:var(--soluk);display:block;margin-bottom:8px}
+nav a{display:block;color:var(--mavi);text-decoration:none;font-size:14.5px;padding:3px 0}
+nav a:hover{color:var(--altin)}
+section{background:var(--kart);border:1px solid var(--cizgi);border-radius:14px;
+        padding:6px 22px 18px;margin-top:12px}
+h2{font-size:19px;margin:20px 0 8px;padding-left:12px;border-left:3px solid var(--altin)}
+p{margin:10px 0;font-size:15px}
+footer{margin-top:36px;text-align:center;font-family:"Space Mono",monospace;
+       font-size:11px;color:var(--soluk)}
+footer a{color:var(--mavi);text-decoration:none}
+</style>
+</head>
+<body>
+<div class="sarmal">
+<div class="ust"><a href="/">usul365.com</a> &nbsp;/&nbsp; <a href="/uygulamalar/namaz-vakti/">Namaz Vakti</a></div>
+<h1>Kullanım Kılavuzu</h1>
+<p class="alt">USUL365 Namaz Vakti — uygulama içinde <b>F1</b> tuşuyla da açılır.</p>
+<nav>
+  <b>Konular</b>  <a href="#b1">Başlarken</a>
+  <a href="#b2">Vakitler nasıl hesaplanıyor</a>
+  <a href="#b3">Hicr&#238; takvim ve kandiller</a>
+  <a href="#b4">G&#246;r&#252;n&#252;m ve bildirimler</a>
+  <a href="#b5">G&#252;ncellemeler</a>
+  <a href="#b6">Hakkında</a>
+</nav>
+<section id="b1">
+  <h2>Başlarken</h2>
+  <p>Uygulamayı ilk a&#231;tığınızda &#252;stteki iki kutudan ilinizi ve il&#231;enizi se&#231;in. İl kutusuna yazmaya başladığınızda liste kendiliğinden s&#252;z&#252;l&#252;r.</p>
+  <p>İl&#231;e listesinde yeriniz yoksa Ayarlar b&#246;l&#252;m&#252;nden enlem ve boylam girerek d&#252;nyanın herhangi bir noktası i&#231;in hesaplama yaptırabilirsiniz.</p>
+  <p>Aynı b&#246;l&#252;mden hesaplama y&#246;ntemini ve ikindi hesabını (Hanef&#238; veya Ş&#226;fi&#238;) se&#231;ebilirsiniz. T&#252;rkiye i&#231;inde varsayılan ayarları değiştirmenize gerek yoktur.</p>
+</section>
+
+<section id="b2">
+  <h2>Vakitler nasıl hesaplanıyor</h2>
+  <p>Vakitler, g&#252;neşin g&#246;ky&#252;z&#252;ndeki konumundan yola &#231;ıkılarak cihazınızda hesaplanır. Herhangi bir sunucuya bağlanılmaz; uygulama internet olmadan da &#231;alışır.</p>
+  <p>T&#252;rkiye i&#231;in resm&#238; uygulamada, hesaplanan ham vakitlere temkin adı verilen g&#252;venlik payları eklenir veya &#231;ıkarılır: g&#252;neş yedi dakika &#246;ne, &#246;ğle beş, ikindi d&#246;rt, akşam yedi dakika sonraya alınır. İmsak ve yatsıya temkin uygulanmaz. Uygulama bu payları kendiliğinden hesaba katar.</p>
+  <p>Bilgi sekmesinde ham astronomik doğuş ve batış saatlerini de g&#246;rebilir, aradaki farkı karşılaştırabilirsiniz.</p>
+  <p>İkindi vaktinde iki &#246;l&#231;&#252;t vardır: cismin g&#246;lgesi kendi boyu kadar uzadığında (Ş&#226;fi&#238;) veya kendi boyunun iki katı olduğunda (Hanef&#238;). T&#252;rkiye&#39;de resm&#238; takvim Hanef&#238; &#246;l&#231;&#252;t&#252;n&#252; esas alır.</p>
+</section>
+
+<section id="b3">
+  <h2>Hicr&#238; takvim ve kandiller</h2>
+  <p>Ekranda miladi tarihin altında hicr&#238; tarih g&#246;sterilir. Hicr&#238; ay başları, ayın d&#252;nya ile g&#252;neş arasına girdiği anın (ictima) astronomik hesabına dayanır.</p>
+  <p>Kameri g&#252;n g&#252;neşin batmasıyla başlar. Bu y&#252;zden kandil geceleri, takvimde yazan g&#252;nden bir &#246;nceki akşam idrak edilir. Uygulama her kandilde bunu ayrı bir satırda a&#231;ık&#231;a belirtir; karışıklığa yer bırakmaz.</p>
+  <p>Din&#238; g&#252;nler resm&#238; takvimden alınmıştır. Ramazan&#39;ın başlangıcı, bayramlar ve kandiller gibi din&#238; bakımdan &#246;nemli g&#252;nlerde her zaman resm&#238; takvimi esas alın.</p>
+  <p>Yaklaşan din&#238; g&#252;nler b&#246;l&#252;m&#252;nde her kandile ka&#231; g&#252;n kaldığını, hangi hicr&#238; g&#252;ne denk geldiğini ve gecesinin hangi akşam başladığını bir arada g&#246;r&#252;rs&#252;n&#252;z.</p>
+</section>
+
+<section id="b4">
+  <h2>G&#246;r&#252;n&#252;m ve bildirimler</h2>
+  <p>G&#246;r&#252;n&#252;m men&#252;s&#252;nden Sade g&#246;r&#252;n&#252;m se&#231;eneğini işaretlerseniz sağdaki takvim paneli gizlenir ve pencere yalnız vakitleri g&#246;steren dar bir kutuya d&#246;ner. Aynı ge&#231;işi başlık satırındaki d&#252;ğmeyle veya Ctrl+M ile de yapabilirsiniz. Bilgisayarda &#231;alışırken vakit takibi i&#231;in bu g&#246;r&#252;n&#252;m elverişlidir.</p>
+  <p>Pencereyi kapattığınızda uygulama kapanmaz, saat yanındaki bildirim alanına k&#252;&#231;&#252;l&#252;r. Simgenin &#252;zerine geldiğinizde sonraki vakte kalan s&#252;reyi g&#246;r&#252;rs&#252;n&#252;z. Simgeye sağ tıklayıp G&#246;ster ile pencereyi geri getirebilir, &#199;ıkış ile uygulamayı tamamen kapatabilirsiniz.</p>
+  <p>Vakit girdiğinde masa&#252;st&#252; bildirimi alırsınız. Bildirimleri Ayarlar b&#246;l&#252;m&#252;nden kapatabilirsiniz.</p>
+</section>
+
+<section id="b5">
+  <h2>G&#252;ncellemeler</h2>
+  <p>Namaz vakti hesabı tamamen cihazınızda yapıldığı i&#231;in uygulama g&#252;ncelleme olmadan da doğru &#231;alışmaya devam eder.</p>
+  <p>Din&#238; g&#252;nler takvimi, hicr&#238; ay başları ve uygulama i&#231;i bilgi metinleri zamanla yenilenir. Bu veriler dijital imzayla korunan paketler h&#226;linde dağıtılır; uygulama indirdiği her paketin imzasını doğrular, imzası tutmayan veya i&#231;eriği değiştirilmiş paketleri reddeder. G&#252;ncelleme paketleri yalnız veri dosyası i&#231;erir, &#231;alıştırılabilir dosya i&#231;ermez.</p>
+  <p>B&#246;ylece her yıl yeni bir takvim satın almanız gerekmez; elinizdeki uygulama g&#252;ncel kalır.</p>
+</section>
+
+<section id="b6">
+  <h2>Hakkında</h2>
+  <p>USUL365 Namaz Vakti<br>S&#252;r&#252;m 1.0</p>
+  <p>Geliştirici: USUL365 (Yusuf Gider)<br>İnternet: usul365.com</p>
+  <p>Uygulamada g&#246;sterilen Kur&#39;&#226;n-ı Ker&#238;m metni Arap&#231;a aslıdır. Din&#238; g&#252;nler ve takvim bilgileri Diyanet İşleri Başkanlığı&#39;nın yayımladığı resm&#238; takvimden derlenmiştir.</p>
+  <p>Vakit hesabı azami &#246;zenle yapılmakla birlikte, din&#238; bakımdan bağlayıcı hususlarda resm&#238; takvim esas alınmalıdır.</p>
+  <p>G&#246;r&#252;ş ve hatalar i&#231;in mağaza sayfasındaki destek bağlantısını kullanabilirsiniz.</p>
+</section>
+
+<footer>
+  <a href="/uygulamalar/namaz-vakti/">&#8592; Tanıtım sayfası</a> &nbsp;·&nbsp;
+  <a href="/">usul365.com</a> &nbsp;·&nbsp;
+  <a href="/gizlilik.html">Gizlilik Politikası</a>
+</footer>
+</div>
+</body>
+</html>
