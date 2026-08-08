@@ -61,7 +61,7 @@ footer a{color:var(--mavi);text-decoration:none}
 
 <h2>Uygulamalar</h2>
 
-<a class="kart" id="lnk-guard" href="https://apps.microsoft.com/detail/9pf0xqkv3dft?hl=tr-TR&gl=TR" target="_blank" rel="noopener">
+<a class="kart" id="lnk-guard" href="https://apps.microsoft.com/detail/9pf0xqkv3dft?hl=tr-TR&gl=TR&cid=site_anasayfa" target="_blank" rel="noopener">
   <div class="ikon urun"><img src="/ikonlar/guard.png" alt=""></div>
   <div class="bilgi">
     <span class="ad">USUL365 Guard</span>
@@ -78,7 +78,7 @@ footer a{color:var(--mavi);text-decoration:none}
   </div><span class="ok">&#8594;</span>
 </a>
 
-<a class="kart" id="lnk-hesappro" href="https://apps.microsoft.com/detail/9p9rf8sd20sj?hl=tr-TR&gl=TR" target="_blank" rel="noopener">
+<a class="kart" id="lnk-hesappro" href="https://apps.microsoft.com/detail/9p9rf8sd20sj?hl=tr-TR&gl=TR&cid=site_anasayfa" target="_blank" rel="noopener">
   <div class="ikon urun"><img src="/ikonlar/hesappro.png" alt=""></div>
   <div class="bilgi">
     <span class="ad">USUL365 HesapPro</span>
@@ -87,12 +87,21 @@ footer a{color:var(--mavi);text-decoration:none}
   </div><span class="ok">&#8594;</span>
 </a>
 
-<a class="kart" id="lnk-namaz" href="/uygulamalar/namaz-vakti/">
+<a class="kart" id="lnk-namaz" href="https://apps.microsoft.com/detail/9MWCJZHF6L2W?hl=tr-TR&gl=TR&cid=site_anasayfa" target="_blank" rel="noopener">
   <div class="ikon urun"><img src="/ikonlar/namaz-vakti.png" alt=""></div>
   <div class="bilgi">
     <span class="ad">USUL365 Namaz Vakti</span>
-    <span class="alt">Namaz vakitleri, hicrî takvim, kıble · tanıtım</span>
-  </div><span class="rozet">Yakında</span>
+    <span class="alt">Namaz vakitleri, hicrî takvim, kıble · Microsoft Store</span>
+    <span class="sayac" id="stat-namaz"></span>
+  </div><span class="ok">&#8594;</span>
+</a>
+
+<a class="kart" id="lnk-namaz-detay" href="/uygulamalar/namaz-vakti/">
+  <div class="ikon kilavuz">&#128214;</div>
+  <div class="bilgi">
+    <span class="ad">Namaz Vakti — Tanıtım ve kullanım kılavuzu</span>
+    <span class="alt">usul365.com/uygulamalar/namaz-vakti</span>
+  </div><span class="ok">&#8594;</span>
 </a>
 
 <h2>Oyunlar</h2>
@@ -106,7 +115,7 @@ footer a{color:var(--mavi);text-decoration:none}
   </div><span class="ok">&#8594;</span>
 </a>
 
-<a class="kart" id="lnk-blok-store" href="https://apps.microsoft.com/detail/9n14sf0jmd4j?hl=tr-TR&gl=TR" target="_blank" rel="noopener">
+<a class="kart" id="lnk-blok-store" href="https://apps.microsoft.com/detail/9n14sf0jmd4j?hl=tr-TR&gl=TR&cid=site_anasayfa" target="_blank" rel="noopener">
   <div class="ikon urun"><img src="/ikonlar/blok.png" alt=""></div>
   <div class="bilgi">
     <span class="ad">Blok Düşür — Microsoft Store</span>
@@ -178,6 +187,7 @@ footer a{color:var(--mavi);text-decoration:none}
     'stat-guard':      ['usul365_click_guard','tıklama'],
     'stat-hesappro':   ['usul365_click_hesappro','tıklama'],
     'stat-blok-store': ['usul365_click_blok_store','tıklama'],
+    'stat-namaz':      ['usul365_click_namaz','tıklama'],
     'stat-blok':       ['usul365_oyun_blokdusur_visits','ziyaret'],
     'stat-yilan':      ['usul365_oyun_yilan_visits','ziyaret']
   };
@@ -193,7 +203,7 @@ footer a{color:var(--mavi);text-decoration:none}
     var tik = {
       'lnk-yt':'usul365_click_youtube', 'lnk-x':'usul365_click_x',
       'lnk-guard':'usul365_click_guard', 'lnk-hesappro':'usul365_click_hesappro',
-      'lnk-blok-store':'usul365_click_blok_store'
+      'lnk-blok-store':'usul365_click_blok_store', 'lnk-namaz':'usul365_click_namaz'
     };
     Object.keys(tik).forEach(function(id){
       var a = document.getElementById(id);
