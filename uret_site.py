@@ -87,7 +87,7 @@ yaz("index.html", BAS % (e(M["ad"])+" — "+e(M["baslik"]), e(M["girisMetni"][:1
           "".join(kart(u) for u in uyg)),
     bolum("oyunlar", "Oyunlar &mdash; Microsoft Store", "Windows için indirilebilir oyunlar.",
           "".join(kart(u) for u in oyunS)),
-    bolum("tarayici", "Playables &mdash; Tarayıcıda", "Kurulum gerektirmeden doğrudan tarayıcıda çalışır; YouTube Playables için de hazırlanıyor.",
+    bolum("playables", "Google Playables", "Tarayıcıda doğrudan oynanan sürümler; Google Playables için hazırlanıyor.",
           "".join(kart(u, True) for u in oyunT))) + SON)
 
 # --- URUN SAYFALARI ---

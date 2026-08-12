@@ -230,6 +230,20 @@
           "a": "İstatistikler: oynanan oyun, toplam satır ve seviye bazlı rekorlar."
         }
       ]
+    },
+    {
+      "slug": "yilan",
+      "ad": "Yılan",
+      "etiket": "TARAYICI OYUNU",
+      "ikon": "blok.png",
+      "storeId": "",
+      "fiyat": "Ücretsiz",
+      "surum": "",
+      "tur": "oyun",
+      "sayfa": "/oyunlar/yilan/",
+      "oyunBag": "/oyunlar/yilan/",
+      "kisa": "Klasik yılan oyunu. Kurulum gerektirmez, doğrudan tarayıcıda çalışır.",
+      "ozellikler": []
     }
   ]
 }

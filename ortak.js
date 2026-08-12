@@ -3,6 +3,7 @@
   var MENU = [
     ["Uygulamalar", "/#uygulamalar"],
     ["Oyunlar",     "/#oyunlar"],
+    ["Playables",   "/#playables"],
     ["Kurumsal",    "/kurumsal.html"],
     ["Destek",      "mailto:destek@usul365.com"]
   ];
