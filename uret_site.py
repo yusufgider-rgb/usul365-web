@@ -87,7 +87,7 @@ yaz("index.html", BAS % (e(M["ad"])+" — "+e(M["baslik"]), e(M["girisMetni"][:1
           "".join(kart(u) for u in uyg)),
     bolum("oyunlar", "Oyunlar &mdash; Microsoft Store", "Windows için indirilebilir oyunlar.",
           "".join(kart(u) for u in oyunS)),
-    bolum("tarayici", "Oyunlar &mdash; Tarayıcıda", "Kurulum gerektirmeden doğrudan tarayıcıda çalışır.",
+    bolum("tarayici", "Playables &mdash; Tarayıcıda", "Kurulum gerektirmeden doğrudan tarayıcıda çalışır; YouTube Playables için de hazırlanıyor.",
           "".join(kart(u, True) for u in oyunT))) + SON)
 
 # --- URUN SAYFALARI ---
@@ -95,7 +95,9 @@ for u in U:
     if not u["ozellikler"]: continue
     v = surum(u["slug"], u.get("surum"))
     oz = "".join('<div class="oz"><b>%s</b><span>%s</span></div>' % (e(o["b"]), e(o["a"])) for o in u["ozellikler"])
-    gor = "".join('<figure><img src="gorseller/%s" alt="%s"></figure>' % (g, e(u["ad"])) for g in gorseller(u["slug"]))
+    _ac = {x["d"]: x["a"] for x in u.get("gorseller", [])}
+    gor = "".join('<figure><img src="gorseller/%s" alt="%s"><figcaption>%s</figcaption></figure>'
+                  % (g, e(u["ad"]), e(_ac.get(g, ""))) for g in gorseller(u["slug"]))
     cl = changelog(u["slug"])
     sur = "".join('<div class="surum"><div class="sbas">%s</div><ul>%s</ul></div>'
                   % (e(b), "".join("<li>%s</li>" % e(x) for x in ml)) for b, ml in cl[:3])
