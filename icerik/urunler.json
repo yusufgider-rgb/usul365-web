@@ -185,15 +185,15 @@
     {
       "slug": "blok-dusur",
       "ad": "Blok Düşür",
-      "etiket": "OYUN · ÜCRETSİZ",
+      "etiket": "OYUN",
       "ikon": "blok.png",
       "storeId": "9n14sf0jmd4j",
-      "fiyat": "Ücretsiz",
+      "fiyat": "250 TL",
       "surum": "1.0.1.0",
       "tur": "oyun",
       "sayfa": "/uygulamalar/blok-dusur/",
       "oyunBag": "/oyunlar/blok-dusur/",
-      "kisa": "Klasik blok yerleştirme oyunu. On dilde arayüz, üç zorluk seviyesi ve kalıcı istatistikler. Tarayıcıda deneyin veya Windows için ücretsiz indirin.",
+      "kisa": "Klasik blok yerleştirme oyunu. On dilde arayüz, üç zorluk seviyesi ve kalıcı istatistikler. Windows sürümü Microsoft Storeda; tarayıcı sürümü ücretsiz oynanabilir.",
       "ozellikler": [
         {
           "b": "Üç zorluk seviyesi",
@@ -234,7 +234,7 @@
     {
       "slug": "yilan",
       "ad": "Yılan",
-      "etiket": "TARAYICI OYUNU",
+      "etiket": "TARAYICI OYUNU · ÜCRETSİZ",
       "ikon": "blok.png",
       "storeId": "",
       "fiyat": "Ücretsiz",
