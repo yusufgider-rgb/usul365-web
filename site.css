@@ -1,0 +1,63 @@
+/* USUL365 site.css — uretilen sayfalarin ortak gorunumu. Elle sayfa duzenlenmez. */
+:root{--bg:#FAF8F3;--kart:#FFF;--cizgi:#EAE4D8;--metin:#2B2B2B;--soluk:#8A8A8A;--altin:#C9A227;--mavi:#4A6FA5;--yesil:#2F8C77}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--metin);font-family:"Segoe UI",system-ui,sans-serif;line-height:1.6}
+a{color:var(--mavi);text-decoration:none}
+.en{max-width:1080px;margin:0 auto;padding:0 24px}
+
+.hero{padding:66px 0 46px;border-bottom:1px solid var(--cizgi)}
+.hero .kucuk{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:2px;
+  text-transform:uppercase;color:var(--altin);margin-bottom:15px}
+.hero h1{font-size:38px;line-height:1.2;margin:0 0 16px;letter-spacing:-.5px;max-width:18ch}
+.hero p{font-size:17px;color:#5A5A5A;margin:0;max-width:60ch}
+
+.dbtnler{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
+.dbtn{display:inline-block;padding:12px 22px;border-radius:11px;font-weight:600;font-size:14px;
+  background:var(--yesil);color:#fff}
+.dbtn:hover{filter:brightness(1.07)}
+.dbtn.ikinci{background:var(--kart);color:var(--metin);border:1px solid var(--cizgi)}
+
+.ilkeler{display:grid;grid-template-columns:repeat(3,1fr);gap:34px;padding:44px 0;border-bottom:1px solid var(--cizgi)}
+.ilke h3{font-size:15px;margin:0 0 6px}
+.ilke p{margin:0;font-size:13.5px;color:var(--soluk)}
+
+.bolum{padding:50px 0;border-bottom:1px solid var(--cizgi)}
+.bolum > h2{font-family:"Space Mono",monospace;font-size:12px;letter-spacing:2px;
+  text-transform:uppercase;color:var(--soluk);margin:0 0 6px}
+.bolum > .aciklama{margin:0 0 24px;color:#5A5A5A;font-size:14.5px;max-width:62ch}
+
+.izgara{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.izgara3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.urun{background:var(--kart);border:1px solid var(--cizgi);border-radius:14px;padding:22px;
+  display:flex;flex-direction:column;transition:border-color .15s,box-shadow .15s}
+.urun:hover{border-color:var(--altin);box-shadow:0 4px 18px rgba(0,0,0,.05)}
+.ubas{display:flex;align-items:center;gap:13px;margin-bottom:14px}
+.uikon{width:44px;height:44px;flex:0 0 44px;border-radius:11px;background:#fff;border:1px solid var(--cizgi);padding:5px}
+.uikon img{width:100%;height:100%;object-fit:contain;display:block}
+.uad{font-weight:600;font-size:16px;display:block}
+.uetiket{font-family:"Space Mono",monospace;font-size:10.5px;color:var(--soluk);display:block;margin-top:2px}
+.ubag{font-size:12.5px}
+.uaciklama{font-size:14px;color:#5A5A5A;margin:0 0 16px;flex:1}
+.ubaglar{display:flex;gap:16px;font-size:13.5px;font-weight:600;align-items:center;flex-wrap:wrap}
+.ubaglar .ikincil{color:var(--soluk);font-weight:400}
+.sayac{display:block;font-family:"Space Mono",monospace;font-size:10.5px;color:var(--altin);margin-top:8px}
+
+.oz{background:var(--kart);border:1px solid var(--cizgi);border-radius:13px;padding:16px 18px}
+.oz b{display:block;font-size:14.5px;margin-bottom:4px}
+.oz span{font-size:13px;color:var(--soluk)}
+
+figure{margin:0 0 16px}
+figure img{width:100%;border:1px solid var(--cizgi);border-radius:14px;display:block}
+
+.surum{background:var(--kart);border:1px solid var(--cizgi);border-radius:14px;padding:18px 22px;margin-bottom:12px}
+.sbas{font-family:"Space Mono",monospace;font-size:12.5px;font-weight:700;margin-bottom:8px}
+.surum ul{margin:0;padding-left:20px}
+.surum li{font-size:14px;color:#5A5A5A;margin-bottom:4px}
+.uretim{padding:24px 0 6px;font-family:"Space Mono",monospace;font-size:11px;color:var(--soluk)}
+
+@media(max-width:820px){
+  .hero{padding:46px 0 34px}
+  .hero h1{font-size:28px}
+  .ilkeler,.izgara,.izgara3{grid-template-columns:1fr;gap:16px}
+  .ilkeler{padding:32px 0}
+}

@@ -1,0 +1,74 @@
+{
+  "marka": {
+    "ad": "USUL365",
+    "baslik": "Doğrulanmış bilgiyle çalışan yazılımlar",
+    "ustetiket": "Yazılım ve Bilgi Sistemleri",
+    "girisMetni": "USUL365, arka planında kaynak doğrulama ve bilgi mühendisliği yatan uygulamalar geliştirir. Ürünler yapay zekâ destekli bir geliştirme hattıyla üretilir ve doğruluk gerektiren her veri resmî kaynağıyla karşılaştırılır. Bugün Windows üzerindeyiz; sırada Google Play ve Apple platformları var.",
+    "slogan": "Doğrulanmış bilgiyle çalışan yazılımlar.",
+    "eposta": "destek@usul365.com",
+    "ilkeler": [
+      { "b": "Doğrulanmış kaynak", "a": "Doğruluk gerektiren her veri resmî kaynağıyla karşılaştırılır. Tahmin değil, kanıt." },
+      { "b": "Veri toplamaz", "a": "Kullanım verisi, konum ya da kişisel bilgi toplanmaz. Ayarlarınız yalnızca kendi cihazınızda kalır." },
+      { "b": "Platformdan bağımsız", "a": "Aynı motor farklı platformlara taşınır. Windows yayında, Google Play hazırlıkta." }
+    ]
+  },
+  "urunler": [
+    {
+      "slug": "guard", "ad": "USUL365 Guard", "etiket": "BAKIM VE GÜVENLİK",
+      "ikon": "guard.png", "storeId": "9pf0xqkv3dft", "fiyat": "250 TL", "surum": "1.0.4.0",
+      "tur": "uygulama", "sayfa": "/uygulamalar/guard/",
+      "kisa": "Disk ve klasör sağlığı, donanım envanteri, sürücü ve yazıcı tanılaması. Bilgisayarınızın durumunu tek ekranda gösterir, önerilerini uygulamadan önce size sorar.",
+      "ozellikler": [
+        { "b": "Genel sistem skoru", "a": "Disk, program yükü, güvenlik ve kaynak kullanımı tek puanda özetlenir; en zayıf halka en üstte görünür." },
+        { "b": "Donanım envanteri", "a": "İşlemci, bellek, disk, ekran kartı, yazıcı ve bağlı aygıtlar listelenir; sorunlu aygıtlar işaretlenir." },
+        { "b": "Klasör sağlığı taraması", "a": "Büyüyen klasörler ve yer kaplayan dosyalar tespit edilir." },
+        { "b": "Onaylı tedavi", "a": "Hiçbir dosya siz onaylamadan taşınmaz. Her işlem kayıt altına alınır ve geri alınabilir." },
+        { "b": "Korunan dosya listesi", "a": "Sistem klasörleri, posta arşivleri ve tarayıcı verileri asla dokunulmaz listesindedir; kendi desenlerinizi ekleyebilirsiniz." },
+        { "b": "Delta ve trend", "a": "Bilgisayarınızın durumu zaman içinde nasıl değişmiş, karşılaştırmalı olarak görürsünüz." }
+      ]
+    },
+    {
+      "slug": "namaz-vakti", "ad": "USUL365 Namaz Vakti", "etiket": "VAKİT VE TAKVİM",
+      "ikon": "namaz-vakti.png", "storeId": "9MWCJZHF6L2W", "fiyat": "250 TL", "surum": "1.0.3.0",
+      "tur": "uygulama", "sayfa": "/uygulamalar/namaz-vakti/",
+      "kisa": "Beş vakit namaz, imsak ve güneş doğuşu; Diyanet resmî takviminden okunan hicrî tarih, yaklaşan dinî günler, kıble açısı ve vakit hatırlatmaları.",
+      "ozellikler": [
+        { "b": "Beş vakit namaz, imsak ve güneş", "a": "Sonraki vakte kalan süre saniye saniye işler; yaklaşan vakit satırı kendiliğinden vurgulanır." },
+        { "b": "Çevrimdışı hesaplama", "a": "Vakitler cihazınızda astronomik olarak hesaplanır; internet bağlantısı gerekmez." },
+        { "b": "Diyanet temkin süreleriyle uyumlu", "a": "Türkiye'de kullanılan hesaplama yöntemi ve resmî temkin süreleri uygulanır." },
+        { "b": "Resmî hicrî takvim", "a": "Hicrî tarih ve dinî günler Diyanet'in yayımladığı resmî takvimden okunur, hesaplamaya bırakılmaz." },
+        { "b": "Kandil ve dinî gün uyarıları", "a": "Yaklaşan kandiller, üç aylar, Ramazan ve bayramlar; kandil gecesinin bir önceki akşam başladığı açıkça belirtilir." },
+        { "b": "Vakit hatırlatmaları", "a": "Vakit girmeden önce hazırlık, vakit çıkmadan önce 'kaçırmayın' ikazı. Süreleri siz belirlersiniz." },
+        { "b": "Günün ayeti", "a": "Her gün Arapça asıl metniyle bir ayet." },
+        { "b": "Kıble ve tablolar", "a": "Kıble açısı, Kâbe mesafesi; haftalık, aylık ve yıllık vakit tabloları." }
+      ]
+    },
+    {
+      "slug": "hesappro", "ad": "USUL365 HesapPro", "etiket": "HESAP VE FİNANS",
+      "ikon": "hesappro.png", "storeId": "9p9rf8sd20sj", "fiyat": "250 TL", "surum": "1.0.0.0",
+      "tur": "uygulama", "sayfa": "/uygulamalar/hesappro/",
+      "kisa": "Bilimsel hesap makinesi, döviz çevirici, kredi taksidi, faiz, KDV ve kâr marjı hesapları. On dilde arayüz, tek pencerede iki çalışma modu.",
+      "ozellikler": [
+        { "b": "Üç hesap modu", "a": "Standart, bilimsel ve programcı modları tek pencerede." },
+        { "b": "Bilimsel işlemler", "a": "Trigonometri, logaritma, üs, kök ve sabitler." },
+        { "b": "İş ve finans sekmesi", "a": "Kredi taksidi, faiz, KDV, kâr marjı, başabaş noktası ve ROI hesapları." },
+        { "b": "Döviz çevirici", "a": "Para birimleri arasında hızlı çevirme." },
+        { "b": "Taban çevirme", "a": "İkilik, sekizlik, onluk ve onaltılık sistemler arasında dönüşüm." },
+        { "b": "On dilde arayüz", "a": "Arapça dahil on dil, arayüzden anında değişir." }
+      ]
+    },
+    {
+      "slug": "blok-dusur", "ad": "Blok Düşür", "etiket": "OYUN · ÜCRETSİZ",
+      "ikon": "blok.png", "storeId": "9n14sf0jmd4j", "fiyat": "Ücretsiz", "surum": "1.0.1.0",
+      "tur": "oyun", "sayfa": "/uygulamalar/blok-dusur/", "oyunBag": "/oyunlar/blok-dusur/",
+      "kisa": "Klasik blok yerleştirme oyunu. On dilde arayüz, üç zorluk seviyesi ve kalıcı istatistikler. Tarayıcıda deneyin veya Windows için ücretsiz indirin.",
+      "ozellikler": [
+        { "b": "Üç zorluk seviyesi", "a": "Kolay, Normal ve Usta; her seviyenin kendi liderlik tablosu var." },
+        { "b": "Kalıcı istatistikler", "a": "Skorlarınız ve rekorlarınız bilgisayarınızda saklanır, uygulama güncellense de korunur." },
+        { "b": "On dilde arayüz", "a": "Türkçe, İngilizce, Arapça, Japonca dahil on dil." },
+        { "b": "Tarayıcı sürümü", "a": "Kurulum yapmadan usul365.com üzerinden de oynanabilir." }
+      ]
+    }
+  ]
+}
+

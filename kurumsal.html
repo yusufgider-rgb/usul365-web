@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<title>Kurumsal — USUL365</title>
+<meta name="description" content="USUL365 hakkında: geliştirme yaklaşımı, ürün ilkeleri, dağıtım ve destek bilgileri.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FAF8F3;--kart:#FFF;--cizgi:#EAE4D8;--metin:#2B2B2B;--soluk:#8A8A8A;--altin:#C9A227;--mavi:#4A6FA5}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--metin);font-family:"Segoe UI",system-ui,sans-serif;line-height:1.6}
+a{color:var(--mavi);text-decoration:none}
+.en{max-width:1080px;margin:0 auto;padding:0 24px}
+.ustbar{position:sticky;top:0;z-index:20;background:rgba(250,248,243,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--cizgi)}
+.ustic{display:flex;align-items:center;gap:28px;height:62px}
+.marka{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:2px;font-size:15px;color:var(--metin)}
+.marka img{width:30px;height:30px;border-radius:8px}
+.menu{margin-left:auto;display:flex;gap:26px;font-size:14px}
+.menu a{color:var(--metin);opacity:.75}
+.menu a:hover,.menu a.etkin{opacity:1;color:var(--mavi)}
+.hero{padding:64px 0 40px;border-bottom:1px solid var(--cizgi)}
+.hero .kucuk{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--altin);margin-bottom:14px}
+.hero h1{font-size:36px;line-height:1.2;margin:0 0 16px;letter-spacing:-.5px}
+.hero p{font-size:17px;color:#5A5A5A;margin:0;max-width:60ch}
+.iki{display:grid;grid-template-columns:1fr 1fr;gap:44px;padding:48px 0;border-bottom:1px solid var(--cizgi)}
+.iki h2{font-size:19px;margin:0 0 12px}
+.iki p{margin:0 0 12px;color:#4A4A4A;font-size:14.5px;max-width:56ch}
+.bolum{padding:48px 0;border-bottom:1px solid var(--cizgi)}
+.bolum h2{font-family:"Space Mono",monospace;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--soluk);margin:0 0 22px}
+.kutular{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.kutu{background:var(--kart);border:1px solid var(--cizgi);border-radius:14px;padding:22px}
+.kutu h3{font-size:15.5px;margin:0 0 8px}
+.kutu p{margin:0;font-size:14px;color:#5A5A5A}
+.kunye{display:grid;grid-template-columns:180px 1fr;gap:10px 24px;font-size:14px;max-width:640px}
+.kunye dt{font-family:"Space Mono",monospace;font-size:11.5px;letter-spacing:1px;text-transform:uppercase;color:var(--soluk);padding-top:3px}
+.kunye dd{margin:0}
+footer{border-top:1px solid var(--cizgi);background:#F5F2EA;padding:44px 0 30px}
+.fizgara{display:grid;grid-template-columns:2fr 1fr 1fr;gap:34px}
+.fmarka{font-weight:700;letter-spacing:2px;font-size:14px}
+.fslogan{color:var(--soluk);font-size:13px;margin-top:8px;max-width:34ch}
+.fbaslik{font-family:"Space Mono",monospace;font-size:10.5px;letter-spacing:1.6px;text-transform:uppercase;color:var(--soluk);margin-bottom:10px}
+.flink{display:block;font-size:13.5px;margin-bottom:7px}
+.falt{margin-top:34px;padding-top:18px;border-top:1px solid var(--cizgi);font-size:11.5px;color:var(--soluk)}
+@media(max-width:820px){
+  .hero h1{font-size:27px}
+  .iki,.kutular,.fizgara{grid-template-columns:1fr;gap:24px}
+  .kunye{grid-template-columns:1fr;gap:2px 0}
+  .kunye dd{margin-bottom:12px}
+  .menu{gap:15px;font-size:13px}
+}
+</style>
+</head>
+<body>
+
+<div class="ustbar"><div class="en ustic">
+  <a class="marka" href="/"><img src="/usul365_logo.jpeg" alt="">USUL365</a>
+  <nav class="menu">
+    <a href="/#uygulamalar">Uygulamalar</a>
+    <a href="/#oyunlar">Oyunlar</a>
+    <a class="etkin" href="/kurumsal.html">Kurumsal</a>
+    <a href="mailto:destek@usul365.com">Destek</a>
+  </nav>
+</div></div>
+
+<div class="en">
+  <section class="hero">
+    <div class="kucuk">Kurumsal</div>
+    <h1>USUL365 hakkında</h1>
+    <p>USUL365, Windows masaüstü için uygulama ve oyun geliştiren bir yazılım
+       markasıdır. Ürünler Microsoft Store üzerinden dağıtılır; her sürüm
+       Microsoft sertifikasyon sürecinden geçtikten sonra yayımlanır.</p>
+  </section>
+
+  <section class="iki">
+    <div>
+      <h2>Ne yapıyoruz</h2>
+      <p>Günlük kullanımda gerçekten ihtiyaç duyulan, tek bir işi düzgün yapan
+         masaüstü uygulamaları geliştiriyoruz. Bir uygulamanın az sayıda özelliği
+         eksiksiz yapmasını, çok sayıda özelliği yarım yapmasına tercih ediyoruz.</p>
+      <p>Ürünler yayımlandıktan sonra bırakılmaz. Kullanıcıdan gelen geri bildirim
+         ve tespit edilen kusurlar sonraki sürümlere girer; güncellemeler Store
+         üzerinden ücretsiz ulaşır.</p>
+    </div>
+    <div>
+      <h2>Nasıl çalışıyoruz</h2>
+      <p>Doğruluk gerektiren hesaplamalarda resmî kaynaklar esas alınır. Örneğin
+         namaz vakitleri ve hicrî takvim, Diyanet İşleri Başkanlığı'nın yayımladığı
+         resmî verilerle karşılaştırılarak doğrulanır.</p>
+      <p>Uygulamalar bilgisayarınızda değişiklik yapmadan önce size sorar. Kullanıcı
+         onayı olmadan dosya taşınmaz, silinmez; yapılan her işlem geri alınabilir
+         biçimde kayıt altına alınır.</p>
+    </div>
+  </section>
+
+  <section class="bolum">
+    <h2>Ürün İlkeleri</h2>
+    <div class="kutular">
+      <div class="kutu"><h3>Çevrimdışı çalışır</h3>
+        <p>Hesaplamalar tamamen cihazınızda yapılır. Sunucu bağlantısı, hesap açma
+           veya oturum gerekmez. İnternet olmadan da tam işlevle çalışır.</p></div>
+      <div class="kutu"><h3>Veri toplamaz</h3>
+        <p>Kullanım istatistiği, konum bilgisi veya kişisel veri toplanmaz ve
+           hiçbir yere gönderilmez. Ayarlar yalnızca kendi bilgisayarınızda saklanır.</p></div>
+      <div class="kutu"><h3>Reklam ve abonelik yok</h3>
+        <p>Uygulama içi reklam, tekrarlayan ödeme veya kilitli özellik bulunmaz.
+           Ücretli ürünler tek seferlik satın alınır.</p></div>
+      <div class="kutu"><h3>Şeffaf güncelleme</h3>
+        <p>Her sürümde neyin değiştiği kayıt altındadır ve Store sürüm notlarında
+           açıkça belirtilir.</p></div>
+    </div>
+  </section>
+
+  <section class="bolum">
+    <h2>Dağıtım ve Destek</h2>
+    <div class="kutular">
+      <div class="kutu"><h3>Microsoft Store</h3>
+        <p>Tüm masaüstü ürünleri yalnızca Microsoft Store üzerinden dağıtılır.
+           Paketler Microsoft tarafından imzalanır ve sertifikasyondan geçer;
+           güncellemeler otomatik gelir.</p></div>
+      <div class="kutu"><h3>Destek</h3>
+        <p>Soru, hata bildirimi ve öneriler için
+           <a href="mailto:destek@usul365.com">destek@usul365.com</a> adresine
+           yazabilirsiniz. Gelen her bildirim doğrudan geliştiriciye ulaşır.</p></div>
+    </div>
+  </section>
+
+  <section class="bolum">
+    <h2>Künye</h2>
+    <dl class="kunye">
+      <dt>Marka</dt><dd>USUL365</dd>
+      <dt>Faaliyet</dt><dd>Bilgisayar programlama faaliyetleri</dd>
+      <dt>Dağıtım</dt><dd>Microsoft Store</dd>
+      <dt>İletişim</dt><dd><a href="mailto:destek@usul365.com">destek@usul365.com</a></dd>
+      <dt>Web</dt><dd><a href="https://usul365.com">usul365.com</a></dd>
+      <dt>Gizlilik</dt><dd><a href="/gizlilik.html">Gizlilik Politikası</a></dd>
+    </dl>
+  </section>
+</div>
+
+<footer><div class="en">
+  <div class="fizgara">
+    <div>
+      <div class="fmarka">USUL365</div>
+      <div class="fslogan">Windows için sade, çevrimdışı çalışan masaüstü uygulamaları.</div>
+    </div>
+    <div>
+      <div class="fbaslik">Ürünler</div>
+      <a class="flink" href="/uygulamalar/guard/">Guard</a>
+      <a class="flink" href="/uygulamalar/namaz-vakti/">Namaz Vakti</a>
+      <a class="flink" href="/#uygulamalar">HesapPro</a>
+      <a class="flink" href="/oyunlar/blok-dusur/">Blok Düşür</a>
+    </div>
+    <div>
+      <div class="fbaslik">Kurumsal</div>
+      <a class="flink" href="/kurumsal.html">Hakkımızda</a>
+      <a class="flink" href="mailto:destek@usul365.com">destek@usul365.com</a>
+      <a class="flink" href="/gizlilik.html">Gizlilik Politikası</a>
+    </div>
+  </div>
+  <div class="falt">&copy; 2026 USUL365 — Yusuf Gider. Tüm hakları saklıdır.</div>
+</div></footer>
+
+</body>
+</html>
+

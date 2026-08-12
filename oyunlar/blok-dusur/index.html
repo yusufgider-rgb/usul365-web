@@ -68,11 +68,19 @@
     background: #2ee6d6; color: #06080f; border: none; border-radius: 10px;
     padding: 12px 28px; font-size: 16px; font-weight: 700;
   }
-  .diffBtn, .lbTab {
+  .diffBtn {
     background: #151b2b; border: 1px solid #2a3145; color: #eef0f6;
     border-radius: 8px; padding: 6px 14px; font-size: 13px; cursor: pointer;
   }
-  .diffBtn.selected, .lbTab.selected { background: #2ee6d6; color: #06080f; border-color: #2ee6d6; font-weight: 700; }
+  .diffBtn.selected { background: #2ee6d6; color: #06080f; border-color: #2ee6d6; font-weight: 700; }
+  .lbTab {
+    background: none; border: none; border-bottom: 2px solid transparent;
+    color: #6b7180; padding: 4px 10px; font-size: 12px; cursor: pointer;
+  }
+  .lbTab.selected { color: #eef0f6; border-bottom-color: #2ee6d6; font-weight: 700; }
+  .overlayLabel {
+    font-size: 11px; color: #6b7180; letter-spacing: .04em; text-transform: uppercase;
+  }
   .side-strip {
     position: fixed; top: 0; width: 160px; height: 100%;
     display: none; flex-direction: column; justify-content: space-around; align-items: center;
@@ -144,6 +152,7 @@
 <div id="overlay" class="show">
   <h1>Blok Dusur</h1>
   <p>Bloklari yerlestir, siralari tamamla.<br>Ok tuslari veya asagidaki dugmelerle oyna.</p>
+  <div class="overlayLabel" style="margin-top:14px;margin-bottom:4px;">Zorluk Sec</div>
   <div id="diffRow" style="display:flex;gap:8px;justify-content:center;margin:12px 0;">
     <button class="diffBtn" data-diff="kolay">Kolay</button>
     <button class="diffBtn selected" data-diff="normal">Normal</button>
@@ -166,6 +175,7 @@
     </div>
   </div>
   <div id="leaderboardBox" style="display:none;margin-top:16px;max-width:320px;">
+    <div class="overlayLabel" style="margin-bottom:6px;">Liderlik Tablosu</div>
     <div id="leaderboardTabs" style="display:flex;gap:6px;justify-content:center;margin-bottom:8px;">
       <button class="lbTab selected" data-diff="kolay">Kolay</button>
       <button class="lbTab" data-diff="normal">Normal</button>
