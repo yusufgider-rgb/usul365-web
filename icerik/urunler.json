@@ -137,34 +137,42 @@
       "ikon": "hesappro.png",
       "storeId": "9p9rf8sd20sj",
       "fiyat": "250 TL",
-      "surum": "1.0.0.0",
+      "surum": "1.0.1.0",
       "tur": "uygulama",
       "sayfa": "/uygulamalar/hesappro/",
-      "kisa": "Bilimsel hesap makinesi, döviz çevirici, kredi taksidi, faiz, KDV ve kâr marjı hesapları. On dilde arayüz, tek pencerede iki çalışma modu.",
+      "kisa": "Standart, bilimsel ve programcı modları; kesir hesabı, KDV + ÖTV, kredi taksidi, faiz ve kâr marjı. Türkiye sayı biçimiyle çalışır. 30 gün ücretsiz denenebilir.",
       "ozellikler": [
         {
           "b": "Üç hesap modu",
           "a": "Standart, bilimsel ve programcı modları tek pencerede."
         },
         {
+          "b": "Kesir modu",
+          "a": "3/4 + 5/6 yazın, sonuç sadeleşmiş kesir olarak gelir: 19/12. Altında ondalık karşılığı ve tam sayılı hâli görünür."
+        },
+        {
           "b": "Bilimsel işlemler",
-          "a": "Trigonometri, logaritma, üs, kök ve sabitler."
+          "a": "Trigonometri, logaritma, üs, kök, pi ve e; kapanmamış parantez uyarıyla belirtilir."
+        },
+        {
+          "b": "KDV ve ÖTV birlikte",
+          "a": "Matrah, ÖTV, KDV ve toplam vergi yükü tek hesapta. Oranı listeden seçin ya da kendiniz girin."
         },
         {
           "b": "İş ve finans sekmesi",
-          "a": "Kredi taksidi, faiz, KDV, kâr marjı, başabaş noktası ve ROI hesapları."
-        },
-        {
-          "b": "Döviz çevirici",
-          "a": "Para birimleri arasında hızlı çevirme."
+          "a": "Kredi taksidi, faiz, kâr marjı, başabaş noktası ve ROI hesapları."
         },
         {
           "b": "Taban çevirme",
           "a": "İkilik, sekizlik, onluk ve onaltılık sistemler arasında dönüşüm."
         },
         {
-          "b": "On dilde arayüz",
-          "a": "Arapça dahil on dil, arayüzden anında değişir."
+          "b": "Türkiye sayı biçimi",
+          "a": "Binlik ayracı yazarken kendiliğinden konur, ondalık virgülle çalışır."
+        },
+        {
+          "b": "Türkçe ve İngilizce",
+          "a": "Dil arayüzden anında değişir."
         }
       ],
       "gorseller": [
@@ -175,10 +183,6 @@
         {
           "d": "02_english_1366.png",
           "a": "Aynı ekran İngilizce arayüzde; dil değişimi anında uygulanır."
-        },
-        {
-          "d": "04_arabic_1366.png",
-          "a": "Arapça arayüz: sayı ve düğme yerleşimi dile göre uyarlanır."
         }
       ]
     },
@@ -188,12 +192,12 @@
       "etiket": "OYUN",
       "ikon": "blok.png",
       "storeId": "9n14sf0jmd4j",
-      "fiyat": "250 TL",
+      "fiyat": "100 TL",
       "surum": "1.0.1.0",
       "tur": "oyun",
       "sayfa": "/uygulamalar/blok-dusur/",
       "oyunBag": "/oyunlar/blok-dusur/",
-      "kisa": "Klasik blok yerleştirme oyunu. On dilde arayüz, üç zorluk seviyesi ve kalıcı istatistikler. Windows sürümü Microsoft Storeda; tarayıcı sürümü ücretsiz oynanabilir.",
+      "kisa": "Klasik blok yerleştirme oyunu. On dilde arayüz, üç zorluk seviyesi ve kalıcı istatistikler. Windows sürümü Microsoft Store'da ve 30 gün ücretsiz denenebilir; tarayıcı sürümü tamamen ücretsiz.",
       "ozellikler": [
         {
           "b": "Üç zorluk seviyesi",
