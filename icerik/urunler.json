@@ -177,12 +177,24 @@
       ],
       "gorseller": [
         {
-          "d": "01_standart_tr_1366.png",
-          "a": "Standart mod, Türkçe arayüz: temel hesaplama ve İş & Finans sekmesi."
+          "d": "01_standart.png",
+          "a": "Standart mod: dört işlem, binlik ayracı yazarken kendiliğinden konuyor, geçmiş paneli sağda."
         },
         {
-          "d": "02_english_1366.png",
-          "a": "Aynı ekran İngilizce arayüzde; dil değişimi anında uygulanır."
+          "d": "02_vergi_kdv_otv.png",
+          "a": "Vergi sekmesi: matrah, ÖTV, KDV ve toplam vergi yükü tek hesapta; oranı listeden seçin ya da kendiniz girin."
+        },
+        {
+          "d": "03_kesir.png",
+          "a": "Kesir modu: 3/4 + 5/6 yazıldığında sonuç sadeleşmiş kesir olarak gelir, altında ondalık karşılığı ve tam sayılı hâli görünür."
+        },
+        {
+          "d": "04_bilimsel.png",
+          "a": "Bilimsel mod: trigonometri, logaritma, üs, kök, pi ve e; kapanmamış parantez uyarıyla belirtiliyor."
+        },
+        {
+          "d": "05_yardim_f1.png",
+          "a": "F1 yardım penceresi: her sekmenin ne yaptığı ve örnek kullanımlar uygulamanın içinde."
         }
       ]
     },
