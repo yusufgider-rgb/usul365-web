@@ -49,3 +49,53 @@
     sut + '</div><div class="u-falt"><div>' + TELIF + '</div><div id="u-sayac"></div></div></div>';
   document.body.appendChild(alt);
 })();
+
+
+/* ==== USUL365_SAYIM - gorunmez ziyaret sayimi ====
+   Hicbir sey gostermez. Sadece sayar. Rakami sahibi API'den okur. */
+(function () {
+  var API = 'https://countapi.mileshilliard.com/api/v1/hit/';
+
+  try {
+    if (new URLSearchParams(location.search).get('ben') === '1') {
+      localStorage.setItem('usul365_sahip', '1');
+    }
+  } catch (e) {}
+
+  function sahip() {
+    try { return localStorage.getItem('usul365_sahip') === '1'; }
+    catch (e) { return false; }
+  }
+
+  function say(anahtar) {
+    if (!anahtar || sahip()) return;
+    try { new Image().src = API + anahtar + '?t=' + Date.now(); } catch (e) {}
+  }
+
+  var y = location.pathname.replace(/index\.html$/, '');
+  var SAYFA = {
+    '/': 'usul365_com_visits',
+    '/kurumsal.html': 'usul365_sayfa_kurumsal',
+    '/guncellemeler.html': 'usul365_sayfa_guncellemeler',
+    '/gizlilik.html': 'usul365_sayfa_gizlilik',
+    '/uygulamalar/guard/': 'usul365_sayfa_guard',
+    '/uygulamalar/hesappro/': 'usul365_sayfa_hesappro',
+    '/uygulamalar/namaz-vakti/': 'usul365_sayfa_namazvakti',
+    '/uygulamalar/blok-dusur/': 'usul365_sayfa_blok'
+  };
+  say(SAYFA[y]);
+
+  var URUN = {
+    '9pf0xqkv3dft': 'usul365_click_guard',
+    '9p9rf8sd20sj': 'usul365_click_hesappro',
+    '9n14sf0jmd4j': 'usul365_click_blok_store',
+    '9mwcjzhf6l2w': 'usul365_click_namaz'
+  };
+  document.addEventListener('click', function (ev) {
+    var a = ev.target && ev.target.closest ? ev.target.closest('a[href]') : null;
+    if (!a) return;
+    var h = (a.getAttribute('href') || '').toLowerCase();
+    if (h.indexOf('apps.microsoft.com') === -1) return;
+    for (var id in URUN) { if (h.indexOf(id) !== -1) { say(URUN[id]); return; } }
+  }, true);
+})();
