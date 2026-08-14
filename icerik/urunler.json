@@ -61,8 +61,16 @@
       ],
       "gorseller": [
         {
-          "d": "usul365_guard_ekran_gorutusu_1.png",
-          "a": "Genel Bakış ekranı: sistem skoru ve alt başlıklar (program yükü, disk sağlığı, güvenlik, kaynaklar) tek listede, en zayıf halka en üstte."
+          "d": "01_genel_bakis.png",
+          "a": "Genel Bakış: disk sağlığı, program yükü, güvenlik ve kaynak kullanımı tek sistem skorunda toplanır; en zayıf halka listenin başında görünür."
+        },
+        {
+          "d": "03_klasor_saglik.png",
+          "a": "Klasör sağlığı taraması: taranacak klasör, sonuç sayısı ve uyarı eşiği seçilir; büyüyen klasörler ve yer kaplayan dosyalar bulunur."
+        },
+        {
+          "d": "04_delta_trend.png",
+          "a": "Delta ve trend: iki tarama arasındaki fark ve bilgisayarın zaman içindeki değişimi karşılaştırmalı olarak gösterilir."
         }
       ]
     },
