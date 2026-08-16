@@ -160,4 +160,107 @@ yaz("guncellemeler.html", BAS % ("Güncellemeler — USUL365", "USUL365 ürünle
  '<div class="uretim">Son üretim: %s</div></div>'
  % ("".join(blok) or "<p>Henüz sürüm kaydı yok.</p>", Z) + SON)
 
+# --- YOL HARITASI ---
+YH  = json.loads((WEB/"icerik/yol_haritasi.json").read_text(encoding="utf-8-sig"))
+RNK = {d["kod"]: (d["etiket"], d["renk"]) for d in YH["durumlar"]}
+
+def rozet(kod):
+    et, rn = RNK.get(kod, (kod, "#8A8A8A"))
+    return ('<span style="display:inline-block;margin-left:10px;padding:2px 10px;border-radius:999px;'
+            'font-size:11px;font-weight:700;letter-spacing:.06em;color:#fff;vertical-align:2px;'
+            'background:%s">%s</span>' % (rn, e(et.upper())))
+
+def yhblok(x):
+    ml = list(x.get("maddeler", []))
+    if x.get("ilerleme"): ml.append("İlerleme: " + x["ilerleme"])
+    return ('<div class="surum"><div class="sbas">%s%s</div>'
+            '<ul><li><b>%s</b></li>%s</ul></div>'
+            % (e(x["ad"]), rozet(x["durum"]), e(x["ozet"]),
+               "".join("<li>%s</li>" % e(m) for m in ml)))
+
+_o    = YH["ozet"].split(".", 1)
+_yh1  = YH.get("h1") or _o[0]
+_yhp  = ((_o[1].strip() + " ") if len(_o) > 1 else "") + YH.get("not", "")
+
+yaz("yol-haritasi.html", BAS % ("Yol Haritası — USUL365", e(YH["ozet"][:150])) +
+ '<div class="en"><section class="hero"><div class="kucuk">%s</div><h1>%s</h1><p>%s</p></section>'
+ '<section class="bolum"><h2>Platformlar</h2>%s</section>'
+ '<section class="bolum"><h2>Yolda olan ürünler</h2>%s</section>'
+ '<div class="uretim">Son üretim: %s</div></div>'
+ % (e(YH["baslik"]), e(_yh1), e(_yhp),
+    "".join(yhblok(p) for p in YH["platformlar"]),
+    "".join(yhblok(u) for u in YH["urunler"]), Z) + SON)
+
+# --- KANAL YERLESIMI ---
+KN = json.loads((WEB/"icerik/kanallar.json").read_text(encoding="utf-8-sig"))
+
+KSTIL = ('<style>#kv{display:flex;align-items:stretch;max-width:1080px;margin:0 auto}'
+ '#ksol{width:212px;flex:none;background:#fff;border-right:1px solid #EAE4D8;padding:18px 0;min-height:540px}'
+ '#ksol .kb{font-size:11px;letter-spacing:.14em;color:#8A8A8A;padding:0 18px 10px}'
+ '#ksol a{display:flex;align-items:center;gap:10px;padding:9px 18px;font-size:14px;color:#5f5f5a;'
+ 'text-decoration:none;border-left:3px solid transparent}'
+ '#ksol a:hover{background:#FAF8F3}'
+ '#ksol a.et{background:#09141E;color:#fff;border-left-color:#C9A227}'
+ '#ksol .nk{width:7px;height:7px;border-radius:50%;margin-left:auto;flex:none}'
+ '#ksol a .mi{width:16px;height:16px;flex:none;background:currentColor;-webkit-mask:var(--u) center/contain no-repeat;mask:var(--u) center/contain no-repeat;opacity:.85}'
+ '#ksol a.et .mi{opacity:1}'
+ '#ksag{flex:1;min-width:0;padding:22px 26px}'
+ '#ksag .kliste{margin:10px 0 0;padding-left:18px;line-height:1.9;color:#5f5f5a;font-size:14px}'
+ '@media(max-width:820px){#kv{display:block}#ksol{width:auto;min-height:0;border-right:0;'
+ 'border-bottom:1px solid #EAE4D8}#ksol a{border-left:0}}</style>')
+
+def knokta(d):
+    return ('<span class="nk" style="background:%s"></span>' % RNK[d][1]) if d in RNK else ""
+
+def kikon(k):
+    return ('<i class="mi" style="--u:url(/ikonlar/marka/%s)"></i>' % k["ikon"]) if k.get("ikon") else ""
+
+def ksol(aktif):
+    return ('<nav id="ksol"><div class="kb">KANALLAR</div>%s</nav>'
+        % "".join('<a href="%s"%s>%s%s%s</a>' % (k["yol"], ' class="et"' if k["id"]==aktif else "",
+                  kikon(k), e(k["ad"]), knokta(k.get("durum"))) for k in KN["kanallar"]))
+
+PARILTI = "#2D80CE"
+ZEMIN = "#09141E"
+UST = {"ev": ('<div id="kbant" style="background:%s"><div style="max-width:1080px;'
+  'margin:0 auto;padding:34px 30px;display:flex;align-items:center;gap:26px;flex-wrap:nowrap">'
+  '<div style="flex:1 1 auto;min-width:0">'
+    '<div style="font-size:29px;line-height:1.3;color:' + PARILTI + '">%s</div></div>'
+  '<img src="/gorseller/usul365_mark_parlak.png" alt="USUL365" '
+  'style="width:380px;max-width:100%%;height:auto;display:block;flex:0 0 auto">'
+  '</div></div>') % (ZEMIN, e(M["baslik"]))}
+
+def ksar(aktif, ic, bas):
+    return BAS % (bas, e(M["girisMetni"][:150])) + KSTIL + \
+           (UST.get(aktif, "") + '<div id="kv">%s<div id="ksag">%s</div></div>' % (ksol(aktif), ic)) + SON
+
+def ksayfa(k):
+    t  = k.get("urunTur")
+    ur = ("".join(kart(u) for u in uyg + oyunS) if t == "hepsi" else
+          "".join(kart(u, True) for u in oyunT) if t == "tarayici" else "")
+    ic = ('<section class="hero"><div class="kucuk">%s%s</div><h1>%s</h1><p>%s</p></section>'
+          % (e(k["ad"]), (" " + rozet(k["durum"])) if k.get("durum") else "",
+             e(k["baslik"]), e(k["giris"])))
+    if k.get("maddeler"):
+        ic += ('<section class="bolum"><h2>Durum</h2><ul class="kliste">%s</ul></section>'
+               % "".join("<li>%s</li>" % e(x) for x in k["maddeler"]))
+    if ur:
+        ic += bolum("urunler", "Ürünler", "", ur)
+    if k.get("bag"):
+        ic += ('<section class="bolum"><a class="dbtn" href="%s" target="_blank" rel="noopener">%s</a></section>'
+               % (k["bag"], e(k["bagMetni"])))
+    return ic
+
+for k in KN["kanallar"]:
+    if k["id"] == "ev": continue
+    yaz("kanallar/%s.html" % k["id"], ksar(k["id"], ksayfa(k), e(k["ad"]) + " — USUL365"))
+
+_ev = ('<section class="hero"><div class="kucuk">%s</div><h1>%s</h1><p>%s</p></section>'
+       '<section class="ilkeler">%s</section>%s'
+       % (e(M["ustetiket"]), e(M["baslik"]), e(M["girisMetni"]), ilke,
+          bolum("uygulamalar", "Ürünler",
+                "Microsoft Store üzerinden dağıtılan uygulamalar ve oyunlar.",
+                "".join(kart(u) for u in uyg + oyunS))))
+yaz("index.html", ksar("ev", _ev, e(M["ad"]) + " — " + e(M["baslik"])))
+
 print("\nTAMAM -", Z)

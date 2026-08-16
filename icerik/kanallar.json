@@ -1,0 +1,100 @@
+{
+  "kanallar": [
+    {
+      "id": "ev",
+      "ad": "Ana sayfa",
+      "yol": "/"
+    },
+    {
+      "id": "microsoft-store",
+      "ad": "Microsoft Store",
+      "yol": "/kanallar/microsoft-store.html",
+      "durum": "CANLI",
+      "baslik": "Dört ürün yayında",
+      "urunTur": "hepsi",
+      "giris": "Masaüstü ürünlerimizin tamamı Microsoft Store üzerinden dağıtılır. Paketler Microsoft tarafından imzalanır ve sertifikasyondan geçer.",
+      "maddeler": [
+        "240 pazarda satışta",
+        "Dört üründe de 30 gün ücretsiz deneme",
+        "Mağaza sayfaları Türkçe ve İngilizce",
+        "Güncellemeler ücretsiz"
+      ]
+    },
+    {
+      "id": "google-play",
+      "ad": "Google Play",
+      "yol": "/kanallar/google-play.html",
+      "durum": "HAZIRLIKTA",
+      "baslik": "Android tarafı hazırlanıyor",
+      "giris": "Ürünlerimiz burada da yakında olacak. Şu an teknik altyapı kuruluyor.",
+      "maddeler": [
+        "Geliştirici hesabı açık, kimlik doğrulaması tamamlandı",
+        "Uygulama kimliği ve dil standardı belirlendi",
+        "İlk aday: USUL365 Namaz Vakti",
+        "Yayına girdiğinde bu sayfadan duyurulacak"
+      ],
+      "ikon": "googleplay.svg"
+    },
+    {
+      "id": "apple",
+      "ad": "Apple App Store",
+      "yol": "/kanallar/apple.html",
+      "durum": "PLANLANDI",
+      "baslik": "Sırada, henüz başlamadı",
+      "giris": "Planımızda var ve hazırlığın bir kısmı şimdiden yapıldı.",
+      "maddeler": [
+        "Uygulama kimliği şeması Google Play ile ortak seçildi",
+        "Donanım ve üyelik koşulları karşılandığında açılacak",
+        "Ürün önceliği Google Play ile aynı olacak"
+      ],
+      "ikon": "apple.svg"
+    },
+    {
+      "id": "playables",
+      "ad": "Playables",
+      "yol": "/kanallar/playables.html",
+      "durum": "HAZIRLIKTA",
+      "baslik": "Tarayıcıda oynanan sürümler",
+      "urunTur": "tarayici",
+      "giris": "İki oyunumuz hâlihazırda tarayıcıda oynanıyor. Playables başvurusu yapıldı, kabul bekleniyor.",
+      "maddeler": [
+        "Blok Düşür ve Yılan şu an oynanabilir durumda",
+        "Bekleme süresinde yeni oyunlarla zenginleştirilecek",
+        "Mevcut oyunlarda kalite güncellemeleri sürüyor"
+      ],
+      "ikon": "youtube.svg"
+    },
+    {
+      "id": "youtube",
+      "ad": "YouTube",
+      "yol": "/kanallar/youtube.html",
+      "durum": "CANLI",
+      "baslik": "Kanalda ne var",
+      "giris": "Ürün anlatımları ve teknoloji içerikleri.",
+      "maddeler": [
+        "Ürün tanıtımları ve kullanım anlatımları",
+        "Yapay zekâ, yazılım ve donanım içerikleri",
+        "Yeni sürümlerin tanıtım videoları"
+      ],
+      "bag": "https://www.youtube.com/@usul365",
+      "bagMetni": "YouTube kanalına git",
+      "ikon": "youtube.svg"
+    },
+    {
+      "id": "x",
+      "ad": "X",
+      "yol": "/kanallar/x.html",
+      "durum": "CANLI",
+      "baslik": "Günlük akış",
+      "giris": "Duyurular ve gündem burada.",
+      "maddeler": [
+        "Yeni sürüm duyuruları",
+        "Yapay zekâ, yazılım, donanım ve geliştirici gündemi",
+        "Doğrudan soru sorabileceğiniz kanal"
+      ],
+      "bag": "https://x.com/usul365",
+      "bagMetni": "X hesabına git",
+      "ikon": "x.svg"
+    }
+  ]
+}

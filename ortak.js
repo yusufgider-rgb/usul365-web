@@ -1,9 +1,7 @@
 /* USUL365 ortak kabuk. Tek degisiklik noktasi: asagidaki MENU ve ALT dizileri. */
 (function(){
   var MENU = [
-    ["Uygulamalar", "/#uygulamalar"],
-    ["Oyunlar",     "/#oyunlar"],
-    ["Playables",   "/#playables"],
+    ["Yol Haritası", "/yol-haritasi.html"],
     ["Kurumsal",    "/kurumsal.html"],
     ["Destek",      "mailto:destek@usul365.com"]
   ];
@@ -16,6 +14,7 @@
     ]],
     ["Kurumsal", [
       ["Hakkımızda",         "/kurumsal.html"],
+      ["Yol Haritası",        "/yol-haritasi.html"],
       ["destek@usul365.com", "mailto:destek@usul365.com"],
       ["Gizlilik Politikası","/gizlilik.html"],
       ["YouTube",            "https://www.youtube.com/@usul365"],
@@ -76,6 +75,7 @@
   var SAYFA = {
     '/': 'usul365_com_visits',
     '/kurumsal.html': 'usul365_sayfa_kurumsal',
+    '/yol-haritasi.html': 'usul365_sayfa_yolharitasi',
     '/guncellemeler.html': 'usul365_sayfa_guncellemeler',
     '/gizlilik.html': 'usul365_sayfa_gizlilik',
     '/uygulamalar/guard/': 'usul365_sayfa_guard',
@@ -83,7 +83,8 @@
     '/uygulamalar/namaz-vakti/': 'usul365_sayfa_namazvakti',
     '/uygulamalar/blok-dusur/': 'usul365_sayfa_blok'
   };
-  say(SAYFA[y]);
+  say(SAYFA[y] || (y.indexOf('/kanallar/') === 0 ?
+    'usul365_kanal_' + y.split('/')[2].replace('.html','').replace(/-/g,'') : null));
 
   var URUN = {
     '9pf0xqkv3dft': 'usul365_click_guard',

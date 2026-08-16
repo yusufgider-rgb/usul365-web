@@ -1,0 +1,87 @@
+{
+  "baslik": "Yol Haritası",
+  "ozet": "Neredeyiz, nereye gidiyoruz. Bu sayfa her sürümle güncellenir.",
+  "not": "Bu sayfada tarih verilmez. Bir iş bittiğinde durumu değişir.",
+  "durumlar": [
+    {
+      "kod": "CANLI",
+      "etiket": "Canlı",
+      "renk": "#2F7A66"
+    },
+    {
+      "kod": "HAZIRLIKTA",
+      "etiket": "Hazırlıkta",
+      "renk": "#C9A227"
+    },
+    {
+      "kod": "PLANLANDI",
+      "etiket": "Planlandı",
+      "renk": "#4A6FA5"
+    },
+    {
+      "kod": "FIKIR",
+      "etiket": "Fikir",
+      "renk": "#8A8A8A"
+    }
+  ],
+  "platformlar": [
+    {
+      "ad": "Microsoft Store",
+      "durum": "CANLI",
+      "ozet": "Dört ürün yayında, 240 pazarda.",
+      "maddeler": [
+        "USUL365 Sürücü ve Donanım, Namaz Vakti, Hesap Pro ve Blok Düşür yayında",
+        "Dört üründe de 30 gün ücretsiz deneme var",
+        "Mağaza sayfaları Türkçe ve İngilizce"
+      ]
+    },
+    {
+      "ad": "Google Play",
+      "durum": "HAZIRLIKTA",
+      "ozet": "Android sürümleri için hazırlık sürüyor.",
+      "maddeler": [
+        "Geliştirici hesabı açık, kimlik doğrulaması tamamlandı",
+        "Uygulama kimliği ve dil standardı belirlendi",
+        "İlk aday: USUL365 Namaz Vakti"
+      ]
+    },
+    {
+      "ad": "Apple App Store",
+      "durum": "PLANLANDI",
+      "ozet": "Sırada, ama henüz başlamadı.",
+      "maddeler": [
+        "Uygulama kimliği şeması Google Play ile ortak seçildi — hazırlığın bir kısmı şimdiden yapıldı",
+        "Donanım ve üyelik koşulları karşılandığında açılacak"
+      ]
+    },
+    {
+      "ad": "YouTube Playables",
+      "durum": "HAZIRLIKTA",
+      "ozet": "Oyunların tarayıcıda çalışan sürümleri hazır.",
+      "maddeler": [
+        "Blok Düşür ve Yılan tarayıcıda oynanabiliyor",
+        "Playables başvurusu yapıldı, sonuç bekleniyor"
+      ]
+    },
+    {
+      "ad": "Doğrudan satış",
+      "durum": "PLANLANDI",
+      "ozet": "Şu an satışın tamamı mağazalar üzerinden.",
+      "maddeler": [
+        "Kendi satış kanalı kurulduğunda burada duyurulacak",
+        "Mesafeli satış bilgileri o aşamada ayrı sayfada yayımlanacak"
+      ]
+    }
+  ],
+  "urunler": [
+    {
+      "ad": "USUL365 Yılan",
+      "durum": "PLANLANDI",
+      "ozet": "Tarayıcıda oynanan Yılan oyununun mağaza sürümü.",
+      "maddeler": [
+        "Tarayıcı sürümü yayında",
+        "Mağazaya çıkmadan önce çok dilli arayüz, zorluk seviyeleri ve kalıcı istatistik eklenecek"
+      ]
+    }
+  ]
+}
