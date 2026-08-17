@@ -97,10 +97,10 @@ for u in U:
     oz = "".join('<div class="oz"><b>%s</b><span>%s</span></div>' % (e(o["b"]), e(o["a"])) for o in u["ozellikler"])
     _ac = {x["d"]: x["a"] for x in u.get("gorseller", [])}
     gor = "".join('<figure><img src="gorseller/%s" alt="%s"><figcaption>%s</figcaption></figure>'
-                  % (g, e(u["ad"]), e(_ac.get(g, ""))) for g in gorseller(u["slug"]))
+                  % (g, e(u["ad"]), e(_ac.get(g, ""))) for g in [])
     cl = changelog(u["slug"])
     sur = "".join('<div class="surum"><div class="sbas">%s</div><ul>%s</ul></div>'
-                  % (e(b), "".join("<li>%s</li>" % e(x) for x in ml)) for b, ml in cl[:3])
+                  % (e(b), "".join("<li>%s</li>" % e(x) for x in ml)) for b, ml in cl)
     btn = []
     if u.get("storeId"):
         btn.append('<a class="dbtn" href="%s" target="_blank" rel="noopener">Microsoft Store&#39;da %s</a>'
@@ -115,7 +115,7 @@ for u in U:
       '<section class="bolum"><h2>Ne sunuyor</h2><div class="izgara3">%s</div></section>%s%s</div>'
       % (e(u["etiket"]), (" &middot; v"+e(v)) if v else "", e(u["ad"]), e(u["kisa"]), "".join(btn), oz,
          ('<section class="bolum"><h2>Ekran görüntüleri</h2>%s</section>' % gor) if gor else "",
-         ('<section class="bolum"><h2>Son güncellemeler</h2>%s<p class="aciklama" style="margin-top:14px">'
+         ('<section class="bolum"><h2>Sürüm geçmişi</h2>%s<p class="aciklama" style="margin-top:14px">'
           '<a href="/guncellemeler.html">Tüm sürüm geçmişi &#8594;</a></p></section>' % sur) if sur else "")
       + SON)
 
