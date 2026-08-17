@@ -24,19 +24,19 @@
   "urunler": [
     {
       "slug": "guard",
-      "ad": "USUL365 Guard",
-      "etiket": "BAKIM VE GÜVENLİK",
+      "ad": "USUL365 Sürücü ve Donanım",
+      "etiket": "TANILAMA VE BAKIM",
       "ikon": "guard.png",
       "storeId": "9pf0xqkv3dft",
       "fiyat": "250 TL",
       "surum": "1.0.4.0",
       "tur": "uygulama",
       "sayfa": "/uygulamalar/guard/",
-      "kisa": "Disk ve klasör sağlığı, donanım envanteri, sürücü ve yazıcı tanılaması. Bilgisayarınızın durumunu tek ekranda gösterir, önerilerini uygulamadan önce size sorar.",
+      "kisa": "Aygıtlarınızı ve sürücülerini tek ekranda listeler; hangi sürücünün kaç gündür güncellenmediğini gösterir ve üreticinin kendi sürücü sayfasına yönlendirir. Yazıcı ve sorunlu aygıt tespiti, disk ve klasör sağlığı. 30 gün ücretsiz denenebilir.",
       "ozellikler": [
         {
-          "b": "Genel sistem skoru",
-          "a": "Disk, program yükü, güvenlik ve kaynak kullanımı tek puanda özetlenir; en zayıf halka en üstte görünür."
+          "b": "Cihaza özel sürücü rehberi",
+          "a": "Her aygıtın sürücü sürümü ve yaşı görünür. Güncelleme gerekiyorsa üreticinin kendi sayfasına yönlendirilirsiniz; Guard sürücüyü kendisi kurmaz."
         },
         {
           "b": "Donanım envanteri",
