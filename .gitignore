@@ -1,3 +1,6 @@
 files.zip
 *.ps1
 __pycache__/
+*_before_*
+*_ONCESI_*
+*_yedek_*
