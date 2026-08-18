@@ -194,7 +194,7 @@ yaz("yol-haritasi.html", BAS % ("Yol Haritası — USUL365", e(YH["ozet"][:150])
 # --- KANAL YERLESIMI ---
 KN = json.loads((WEB/"icerik/kanallar.json").read_text(encoding="utf-8-sig"))
 
-KSTIL = ('<style>#kv{display:grid;grid-template-columns:240px minmax(0,1fr);align-items:stretch}'
+KSTIL = ('<style>#kv{display:grid;grid-template-columns:250px minmax(0,1fr);align-items:stretch;width:100%}'
  '#ksol{flex:none;background:#fff;border-right:1px solid #EAE4D8;padding:18px 0;min-height:540px}'
  '#ksol .kb{font-size:11px;letter-spacing:.14em;color:#8A8A8A;padding:0 18px 10px}'
  '#ksol a{display:flex;align-items:center;gap:10px;padding:9px 18px;font-size:14px;color:#5f5f5a;'
@@ -204,7 +204,7 @@ KSTIL = ('<style>#kv{display:grid;grid-template-columns:240px minmax(0,1fr);alig
  '#ksol .nk{width:7px;height:7px;border-radius:50%;margin-left:auto;flex:none}'
  '#ksol a .mi{width:16px;height:16px;flex:none;background:currentColor;-webkit-mask:var(--u) center/contain no-repeat;mask:var(--u) center/contain no-repeat;opacity:.85}'
  '#ksol a.et .mi{opacity:1}'
- '#ksag{flex:1;min-width:0;padding:22px 26px}'
+ '#ksag{padding:0 40px;flex:1;min-width:0;padding:22px 26px}'
  '#ksag .kliste{margin:10px 0 0;padding-left:18px;line-height:1.9;color:#5f5f5a;font-size:14px}'
  '@media(max-width:820px){#kv{display:block}#ksol{width:auto;min-height:0;border-right:0;'
  'border-bottom:1px solid #EAE4D8}#ksol a{border-left:0}}</style>')

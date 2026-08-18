@@ -3,7 +3,7 @@
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--metin);font-family:"Segoe UI",system-ui,sans-serif;line-height:1.6}
 a{color:var(--mavi);text-decoration:none}
-.en{max-width:none;margin:0;padding:0 32px}
+.en{max-width:none;margin:0;padding:0}
 
 .hero{padding:66px 0 46px;border-bottom:1px solid var(--cizgi)}
 .hero .kucuk{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:2px;
