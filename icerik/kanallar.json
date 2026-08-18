@@ -11,8 +11,8 @@
       "yol": "/kanallar/microsoft-store.html",
       "durum": "CANLI",
       "baslik": "Dört ürün yayında",
-      "urunTur": "hepsi",
       "giris": "Masaüstü ürünlerimizin tamamı Microsoft Store üzerinden dağıtılır. Paketler Microsoft tarafından imzalanır ve sertifikasyondan geçer.",
+      "urunTur": "hepsi",
       "maddeler": [
         "240 pazarda satışta",
         "Dört üründe de 30 gün ücretsiz deneme",
@@ -32,8 +32,7 @@
         "Uygulama kimliği ve dil standardı belirlendi",
         "İlk aday: USUL365 Namaz Vakti",
         "Yayına girdiğinde bu sayfadan duyurulacak"
-      ],
-      "ikon": "googleplay.svg"
+      ]
     },
     {
       "id": "apple",
@@ -46,23 +45,21 @@
         "Uygulama kimliği şeması Google Play ile ortak seçildi",
         "Donanım ve üyelik koşulları karşılandığında açılacak",
         "Ürün önceliği Google Play ile aynı olacak"
-      ],
-      "ikon": "apple.svg"
+      ]
     },
     {
       "id": "playables",
-      "ad": "Playables",
+      "ad": "YouTube Playables",
       "yol": "/kanallar/playables.html",
       "durum": "HAZIRLIKTA",
       "baslik": "Tarayıcıda oynanan sürümler",
-      "urunTur": "tarayici",
       "giris": "İki oyunumuz hâlihazırda tarayıcıda oynanıyor. Playables başvurusu yapıldı, kabul bekleniyor.",
+      "urunTur": "tarayici",
       "maddeler": [
         "Blok Düşür ve Yılan şu an oynanabilir durumda",
         "Bekleme süresinde yeni oyunlarla zenginleştirilecek",
         "Mevcut oyunlarda kalite güncellemeleri sürüyor"
-      ],
-      "ikon": "youtube.svg"
+      ]
     },
     {
       "id": "youtube",
@@ -77,8 +74,7 @@
         "Yeni sürümlerin tanıtım videoları"
       ],
       "bag": "https://www.youtube.com/@usul365",
-      "bagMetni": "YouTube kanalına git",
-      "ikon": "youtube.svg"
+      "bagMetni": "YouTube kanalına git"
     },
     {
       "id": "x",
@@ -93,8 +89,51 @@
         "Doğrudan soru sorabileceğiniz kanal"
       ],
       "bag": "https://x.com/usul365",
-      "bagMetni": "X hesabına git",
-      "ikon": "x.svg"
+      "bagMetni": "X hesabına git"
+    },
+    {
+      "id": "linkedin",
+      "ad": "LinkedIn",
+      "yol": "/kanallar/linkedin.html",
+      "durum": "CANLI",
+      "baslik": "Açıklayıcı yazılar",
+      "giris": "Yaptığımız işin arkasındaki yöntemi ve yol boyunca öğrendiklerimizi burada yazıyoruz.",
+      "maddeler": [
+        "Ürün duyuruları",
+        "Geliştirme notları"
+      ]
+    },
+    {
+      "id": "facebook",
+      "ad": "Facebook",
+      "yol": "/kanallar/facebook.html",
+      "durum": "HAZIRLIKTA",
+      "baslik": "Sayfa hazırlanıyor",
+      "giris": "Facebook sayfamız hazırlanıyor. Yayına girdiğinde bağlantısı buraya eklenecek."
+    },
+    {
+      "id": "instagram",
+      "ad": "Instagram",
+      "yol": "/kanallar/instagram.html",
+      "durum": "PLANLANDI",
+      "baslik": "Yakında",
+      "giris": "Ürünlerin görsel tanıtımı için Instagram hesabı planlanıyor."
+    },
+    {
+      "id": "whatsapp",
+      "ad": "WhatsApp Kanalı",
+      "yol": "/kanallar/whatsapp.html",
+      "durum": "PLANLANDI",
+      "baslik": "Duyuru kanalı",
+      "giris": "Yeni sürümler ve duyurular için tek yönlü bir WhatsApp kanalı planlanıyor."
+    },
+    {
+      "id": "tiktok",
+      "ad": "TikTok",
+      "yol": "/kanallar/tiktok.html",
+      "durum": "PLANLANDI",
+      "baslik": "Yakında",
+      "giris": "Kısa videolar için TikTok hesabı planlanıyor."
     }
   ]
 }
