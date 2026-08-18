@@ -228,7 +228,7 @@ UST = {"ev": ('<div id="kbant" style="background:%s"><div style="max-width:1080p
     '<div style="font-size:29px;line-height:1.3;color:' + PARILTI + '">%s</div></div>'
   '<img src="/gorseller/usul365_mark_parlak.png" alt="USUL365" '
   'style="width:380px;max-width:100%%;height:auto;display:block;flex:0 0 auto">'
-  '</div></div>') % (ZEMIN, e(M["baslik"]))}
+  '</div></div>') % (ZEMIN, e(M["slogan"]))}
 
 def ksar(aktif, ic, bas):
     return BAS % (bas, e(M["girisMetni"][:150])) + KSTIL + \

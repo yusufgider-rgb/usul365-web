@@ -6,7 +6,7 @@
 #u-bar .u-en{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;align-items:center;height:60px}
 #u-bar .u-marka{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:2px;
   font-size:15px;color:var(--u-metin);text-decoration:none}
-#u-bar .u-marka img{width:28px;height:28px;border-radius:8px}
+#u-bar .u-marka img{height:38px;width:auto;border-radius:0}
 #u-bar nav{margin-left:auto;display:flex;gap:24px;font-size:14px}
 #u-bar nav a{color:var(--u-metin);opacity:.75;text-decoration:none}
 #u-bar nav a:hover,#u-bar nav a.u-etkin{opacity:1;color:var(--u-mavi)}

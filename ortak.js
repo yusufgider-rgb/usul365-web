@@ -33,7 +33,7 @@
   var bar = document.createElement("div");
   bar.id = "u-bar";
   bar.innerHTML = '<div class="u-en"><a class="u-marka" href="/">' +
-    '<img src="/usul365_logo.jpeg" alt="">USUL365</a><nav>' + m + '</nav></div>';
+    '<img src="/gorseller/usul365_menu.png" alt="">USUL365</a><nav>' + m + '</nav></div>';
   document.body.insertBefore(bar, document.body.firstChild);
 
   var sut = ALT.map(function(g){
