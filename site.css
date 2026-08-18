@@ -63,3 +63,9 @@ figure img{width:100%;border:1px solid var(--cizgi);border-radius:14px;display:b
 }
 figcaption{font-family:"Space Mono",monospace;font-size:11.5px;color:var(--soluk);
   margin-top:8px;margin-bottom:22px;line-height:1.5}
+
+/* Kartin tamami tiklanabilir: birincil baglanti karti kaplar, ikincil baglanti ve sayac ustte kalir */
+.urun{position:relative}
+.urun .tumkart::after{content:'';position:absolute;inset:0;z-index:1}
+.urun .ubaglar a.ikincil,.urun .sayac{position:relative;z-index:2}
+.urun:hover{border-color:#C9A227}

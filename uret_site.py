@@ -58,9 +58,9 @@ def kart(u, tarayici=False):
     v = surum(u["slug"], u.get("surum"))
     vt = (" &middot; v" + e(v)) if v else ""
     if tarayici:
-        bag = '<a href="%s">Oyna &#8594;</a>' % u["oyunBag"]
+        bag = '<a class="tumkart" href="%s">Oyna &#8594;</a>' % u["oyunBag"]
     else:
-        bag = '<a href="%s">%s &#8594;</a>' % (u["sayfa"], "Ürünü tanıyın")
+        bag = '<a class="tumkart" href="%s">%s &#8594;</a>' % (u["sayfa"], "Ürünü tanıyın")
         if u.get("storeId"):
             bag += ('<a class="ikincil" id="lnk-%s" href="%s" target="_blank" rel="noopener">Microsoft Store</a>'
                     % (u["slug"], store(u, "site_anasayfa")))
