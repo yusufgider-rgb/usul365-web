@@ -1,4 +1,4 @@
-:root{--u-genislik:1360px}
+:root{--u-genislik:1600px}
 /* USUL365 ortak kabuk — ust menu ve alt bilgi. Sayfaya ozel stiller dosyanin kendisinde kalir. */
 :root{--u-bg:#FAF8F3;--u-cizgi:#EAE4D8;--u-metin:#2B2B2B;--u-soluk:#8A8A8A;--u-altin:#C9A227;--u-mavi:#4A6FA5}
 #u-bar{position:sticky;top:0;z-index:50;background:rgba(250,248,243,.94);
