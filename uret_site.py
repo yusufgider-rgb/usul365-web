@@ -223,11 +223,11 @@ def ksol(aktif):
 PARILTI = "#2D80CE"
 ZEMIN = "#09141E"
 UST = {"ev": ('<div id="kbant" style="background:%s"><div style="max-width:none;'
-  'margin:0 auto;padding:34px 30px;display:flex;align-items:center;gap:26px;flex-wrap:nowrap">'
+  'margin:0 auto;padding:24px 40px;display:flex;align-items:center;gap:26px;flex-wrap:nowrap">'
   '<div style="flex:1 1 auto;min-width:0">'
     '<div style="font-size:29px;line-height:1.3;color:' + PARILTI + '">%s</div></div>'
   '<img src="/gorseller/usul365_mark_parlak.png" alt="USUL365" '
-  'style="width:380px;max-width:100%%;height:auto;display:block;flex:0 0 auto">'
+  'style="width:320px;max-width:100%%;height:auto;display:block;flex:0 0 auto">'
   '</div></div>') % (ZEMIN, e(M["slogan"]))}
 
 def ksar(aktif, ic, bas):
