@@ -194,8 +194,8 @@ yaz("yol-haritasi.html", BAS % ("Yol Haritası — USUL365", e(YH["ozet"][:150])
 # --- KANAL YERLESIMI ---
 KN = json.loads((WEB/"icerik/kanallar.json").read_text(encoding="utf-8-sig"))
 
-KSTIL = ('<style>#kv{display:flex;align-items:stretch;max-width:var(--u-genislik,1360px);margin:0 auto}'
- '#ksol{width:212px;flex:none;background:#fff;border-right:1px solid #EAE4D8;padding:18px 0;min-height:540px}'
+KSTIL = ('<style>#kv{display:grid;grid-template-columns:240px minmax(0,1fr);align-items:stretch}'
+ '#ksol{flex:none;background:#fff;border-right:1px solid #EAE4D8;padding:18px 0;min-height:540px}'
  '#ksol .kb{font-size:11px;letter-spacing:.14em;color:#8A8A8A;padding:0 18px 10px}'
  '#ksol a{display:flex;align-items:center;gap:10px;padding:9px 18px;font-size:14px;color:#5f5f5a;'
  'text-decoration:none;border-left:3px solid transparent}'
@@ -222,7 +222,7 @@ def ksol(aktif):
 
 PARILTI = "#2D80CE"
 ZEMIN = "#09141E"
-UST = {"ev": ('<div id="kbant" style="background:%s"><div style="max-width:var(--u-genislik,1360px);'
+UST = {"ev": ('<div id="kbant" style="background:%s"><div style="max-width:none;'
   'margin:0 auto;padding:34px 30px;display:flex;align-items:center;gap:26px;flex-wrap:nowrap">'
   '<div style="flex:1 1 auto;min-width:0">'
     '<div style="font-size:29px;line-height:1.3;color:' + PARILTI + '">%s</div></div>'

@@ -4,7 +4,7 @@
 #u-bar{position:sticky;top:0;z-index:50;background:rgba(250,248,243,.94);
   backdrop-filter:blur(8px);border-bottom:1px solid var(--u-cizgi);
   font-family:"Segoe UI",system-ui,sans-serif}
-#u-bar .u-en{max-width:var(--u-genislik,1360px);margin:0 auto;padding:0 24px;display:flex;align-items:center;height:60px}
+#u-bar .u-en{max-width:none;margin:0;padding:0 32px;display:flex;align-items:center;height:60px}
 #u-bar .u-marka{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:2px;
   font-size:15px;color:var(--u-metin);text-decoration:none}
 #u-bar .u-marka img{height:38px;width:auto;border-radius:0}
@@ -14,7 +14,7 @@
 
 #u-alt{border-top:1px solid var(--u-cizgi);background:#F5F2EA;padding:42px 0 28px;
   font-family:"Segoe UI",system-ui,sans-serif;color:var(--u-metin);margin-top:48px}
-#u-alt .u-en{max-width:var(--u-genislik,1360px);margin:0 auto;padding:0 24px}
+#u-alt .u-en{max-width:none;margin:0;padding:0 32px}
 #u-alt .u-izgara{display:grid;grid-template-columns:2fr 1fr 1fr;gap:34px}
 #u-alt .u-fmarka{font-weight:700;letter-spacing:2px;font-size:14px}
 #u-alt .u-fslogan{color:var(--u-soluk);font-size:13px;margin-top:8px;max-width:34ch}
