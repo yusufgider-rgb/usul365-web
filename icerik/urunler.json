@@ -1,273 +1,273 @@
 {
-  "marka": {
-    "ad": "USUL365",
-    "baslik": "Doğrulanmış bilgiyle çalışan yazılımlar",
-    "ustetiket": "USUL365 — Windows Uygulamaları & Yazılım Geliştirme",
-    "girisMetni": "USUL365, arka planında kaynak doğrulama ve bilgi mühendisliği yatan uygulamalar geliştirir. Ürünler yapay zekâ destekli bir geliştirme hattıyla üretilir ve doğruluk gerektiren her veri resmî kaynağıyla karşılaştırılır. Bugün Windows üzerindeyiz; sırada Google Play ve Apple platformları var.",
-    "slogan": "USUL365 · Yazılım ve Bilgi Sistemleri",
-    "eposta": "destek@usul365.com",
-    "ilkeler": [
-      {
-        "b": "Doğrulanmış kaynak",
-        "a": "Doğruluk gerektiren her veri resmî kaynağıyla karşılaştırılır. Tahmin değil, kanıt."
-      },
-      {
-        "b": "Veri toplamaz",
-        "a": "Kullanım verisi, konum ya da kişisel bilgi toplanmaz. Ayarlarınız yalnızca kendi cihazınızda kalır."
-      },
-      {
-        "b": "Platformdan bağımsız",
-        "a": "Aynı motor farklı platformlara taşınır. Windows yayında, Google Play hazırlıkta."
-      }
-    ]
-  },
-  "urunler": [
-    {
-      "slug": "guard",
-      "ad": "USUL365 Sürücü ve Donanım",
-      "etiket": "TANILAMA VE BAKIM",
-      "ikon": "guard.png",
-      "storeId": "9pf0xqkv3dft",
-      "fiyat": "250 TL",
-      "surum": "1.0.4.0",
-      "tur": "uygulama",
-      "sayfa": "/uygulamalar/guard/",
-      "kisa": "Aygıtlarınızı ve sürücülerini tek ekranda listeler; hangi sürücünün kaç gündür güncellenmediğini gösterir ve üreticinin kendi sürücü sayfasına yönlendirir. Yazıcı ve sorunlu aygıt tespiti, disk ve klasör sağlığı. 30 gün ücretsiz denenebilir.",
-      "ozellikler": [
-        {
-          "b": "Cihaza özel sürücü rehberi",
-          "a": "Her aygıtın sürücü sürümü ve yaşı görünür. Güncelleme gerekiyorsa üreticinin kendi sayfasına yönlendirilirsiniz; Guard sürücüyü kendisi kurmaz."
-        },
-        {
-          "b": "Donanım envanteri",
-          "a": "İşlemci, bellek, disk, ekran kartı, yazıcı ve bağlı aygıtlar listelenir; sorunlu aygıtlar işaretlenir."
-        },
-        {
-          "b": "Klasör sağlığı taraması",
-          "a": "Büyüyen klasörler ve yer kaplayan dosyalar tespit edilir."
-        },
-        {
-          "b": "Onaylı tedavi",
-          "a": "Hiçbir dosya siz onaylamadan taşınmaz. Her işlem kayıt altına alınır ve geri alınabilir."
-        },
-        {
-          "b": "Korunan dosya listesi",
-          "a": "Sistem klasörleri, posta arşivleri ve tarayıcı verileri asla dokunulmaz listesindedir; kendi desenlerinizi ekleyebilirsiniz."
-        },
-        {
-          "b": "Delta ve trend",
-          "a": "Bilgisayarınızın durumu zaman içinde nasıl değişmiş, karşılaştırmalı olarak görürsünüz."
-        }
-      ],
-      "gorseller": [
-        {
-          "d": "01_genel_bakis.png",
-          "a": "Genel Bakış: disk sağlığı, program yükü, güvenlik ve kaynak kullanımı tek sistem skorunda toplanır; en zayıf halka listenin başında görünür."
-        },
-        {
-          "d": "03_klasor_saglik.png",
-          "a": "Klasör sağlığı taraması: taranacak klasör, sonuç sayısı ve uyarı eşiği seçilir; büyüyen klasörler ve yer kaplayan dosyalar bulunur."
-        },
-        {
-          "d": "04_delta_trend.png",
-          "a": "Delta ve trend: iki tarama arasındaki fark ve bilgisayarın zaman içindeki değişimi karşılaştırmalı olarak gösterilir."
-        }
-      ]
-    },
-    {
-      "slug": "namaz-vakti",
-      "ad": "USUL365 Namaz Vakti",
-      "etiket": "VAKİT VE TAKVİM",
-      "ikon": "namaz-vakti.png",
-      "storeId": "9MWCJZHF6L2W",
-      "fiyat": "250 TL",
-      "surum": "1.0.4.0",
-      "tur": "uygulama",
-      "sayfa": "/uygulamalar/namaz-vakti/",
-      "kisa": "Beş vakit namaz, imsak ve güneş doğuşu; Diyanet resmî takviminden okunan hicrî tarih, yaklaşan dinî günler, kıble açısı ve vakit hatırlatmaları.",
-      "ozellikler": [
-        {
-          "b": "Beş vakit namaz, imsak ve güneş",
-          "a": "Sonraki vakte kalan süre saniye saniye işler; yaklaşan vakit satırı kendiliğinden vurgulanır."
-        },
-        {
-          "b": "Çevrimdışı hesaplama",
-          "a": "Vakitler cihazınızda astronomik olarak hesaplanır; internet bağlantısı gerekmez."
-        },
-        {
-          "b": "Diyanet temkin süreleriyle uyumlu",
-          "a": "Türkiye'de kullanılan hesaplama yöntemi ve resmî temkin süreleri uygulanır."
-        },
-        {
-          "b": "Resmî hicrî takvim",
-          "a": "Hicrî tarih ve dinî günler Diyanet'in yayımladığı resmî takvimden okunur, hesaplamaya bırakılmaz."
-        },
-        {
-          "b": "Kandil ve dinî gün uyarıları",
-          "a": "Yaklaşan kandiller, üç aylar, Ramazan ve bayramlar; kandil gecesinin bir önceki akşam başladığı açıkça belirtilir."
-        },
-        {
-          "b": "Vakit hatırlatmaları",
-          "a": "Vakit girmeden önce hazırlık, vakit çıkmadan önce 'kaçırmayın' ikazı. Süreleri siz belirlersiniz."
-        },
-        {
-          "b": "Günün ayeti",
-          "a": "Her gün Arapça asıl metniyle bir ayet."
-        },
-        {
-          "b": "Kıble ve tablolar",
-          "a": "Kıble açısı, Kâbe mesafesi; haftalık, aylık ve yıllık vakit tabloları."
-        }
-      ],
-      "gorseller": [
-        {
-          "d": "01_genis_gorunum.png",
-          "a": "Geniş görünüm: solda vakit listesi ve geri sayım, sağda günün ayeti, yaklaşan dinî günler ve hicrî takvim."
-        },
-        {
-          "d": "02_sade_gorunum.png",
-          "a": "Sade görünüm: yalnız vakitler ve kalan süre; ekranda az yer kaplaması istendiğinde."
-        },
-        {
-          "d": "03_ne_sunuyor.png",
-          "a": "Haftalık tablo: tarih, gün adı ve hicrî karşılığıyla birlikte yedi günün vakitleri."
-        },
-        {
-          "d": "04_nasil_calisir.png",
-          "a": "Bilgi sekmesi: kıble açısı, Kâbe mesafesi, astronomik doğuş-batış ve uygulama sürümü."
-        }
-      ]
-    },
-    {
-      "slug": "hesappro",
-      "ad": "USUL365 HesapPro",
-      "etiket": "HESAP VE FİNANS",
-      "ikon": "hesappro.png",
-      "storeId": "9p9rf8sd20sj",
-      "fiyat": "250 TL",
-      "surum": "1.0.1.0",
-      "tur": "uygulama",
-      "sayfa": "/uygulamalar/hesappro/",
-      "kisa": "Standart, bilimsel ve programcı modları; kesir hesabı, KDV + ÖTV, kredi taksidi, faiz ve kâr marjı. Türkiye sayı biçimiyle çalışır. 30 gün ücretsiz denenebilir.",
-      "ozellikler": [
-        {
-          "b": "Üç hesap modu",
-          "a": "Standart, bilimsel ve programcı modları tek pencerede."
-        },
-        {
-          "b": "Kesir modu",
-          "a": "3/4 + 5/6 yazın, sonuç sadeleşmiş kesir olarak gelir: 19/12. Altında ondalık karşılığı ve tam sayılı hâli görünür."
-        },
-        {
-          "b": "Bilimsel işlemler",
-          "a": "Trigonometri, logaritma, üs, kök, pi ve e; kapanmamış parantez uyarıyla belirtilir."
-        },
-        {
-          "b": "KDV ve ÖTV birlikte",
-          "a": "Matrah, ÖTV, KDV ve toplam vergi yükü tek hesapta. Oranı listeden seçin ya da kendiniz girin."
-        },
-        {
-          "b": "İş ve finans sekmesi",
-          "a": "Kredi taksidi, faiz, kâr marjı, başabaş noktası ve ROI hesapları."
-        },
-        {
-          "b": "Taban çevirme",
-          "a": "İkilik, sekizlik, onluk ve onaltılık sistemler arasında dönüşüm."
-        },
-        {
-          "b": "Türkiye sayı biçimi",
-          "a": "Binlik ayracı yazarken kendiliğinden konur, ondalık virgülle çalışır."
-        },
-        {
-          "b": "Türkçe ve İngilizce",
-          "a": "Dil arayüzden anında değişir."
-        }
-      ],
-      "gorseller": [
-        {
-          "d": "01_standart.png",
-          "a": "Standart mod: dört işlem, binlik ayracı yazarken kendiliğinden konuyor, geçmiş paneli sağda."
-        },
-        {
-          "d": "02_vergi_kdv_otv.png",
-          "a": "Vergi sekmesi: matrah, ÖTV, KDV ve toplam vergi yükü tek hesapta; oranı listeden seçin ya da kendiniz girin."
-        },
-        {
-          "d": "03_kesir.png",
-          "a": "Kesir modu: 3/4 + 5/6 yazıldığında sonuç sadeleşmiş kesir olarak gelir, altında ondalık karşılığı ve tam sayılı hâli görünür."
-        },
-        {
-          "d": "04_bilimsel.png",
-          "a": "Bilimsel mod: trigonometri, logaritma, üs, kök, pi ve e; kapanmamış parantez uyarıyla belirtiliyor."
-        },
-        {
-          "d": "05_yardim_f1.png",
-          "a": "F1 yardım penceresi: her sekmenin ne yaptığı ve örnek kullanımlar uygulamanın içinde."
-        }
-      ]
-    },
-    {
-      "slug": "blok-dusur",
-      "ad": "Blok Düşür",
-      "etiket": "OYUN",
-      "ikon": "blok.png",
-      "storeId": "9n14sf0jmd4j",
-      "fiyat": "100 TL",
-      "surum": "1.0.1.0",
-      "tur": "oyun",
-      "sayfa": "/uygulamalar/blok-dusur/",
-      "oyunBag": "/oyunlar/blok-dusur/",
-      "kisa": "Klasik blok yerleştirme oyunu. On dilde arayüz, üç zorluk seviyesi ve kalıcı istatistikler. Windows sürümü Microsoft Store'da ve 30 gün ücretsiz denenebilir; tarayıcı sürümü tamamen ücretsiz.",
-      "ozellikler": [
-        {
-          "b": "Üç zorluk seviyesi",
-          "a": "Kolay, Normal ve Usta; her seviyenin kendi liderlik tablosu var."
-        },
-        {
-          "b": "Kalıcı istatistikler",
-          "a": "Skorlarınız ve rekorlarınız bilgisayarınızda saklanır, uygulama güncellense de korunur."
-        },
-        {
-          "b": "On dilde arayüz",
-          "a": "Türkçe, İngilizce, Arapça, Japonca dahil on dil."
-        },
-        {
-          "b": "Tarayıcı sürümü",
-          "a": "Kurulum yapmadan usul365.com üzerinden de oynanabilir."
-        }
-      ],
-      "gorseller": [
-        {
-          "d": "blok_01_oyun_ici.png",
-          "a": "Oyun ekranı: skor, seviye, satır sayısı ve sıradaki blok yan panelde."
-        },
-        {
-          "d": "blok_02_menu.png",
-          "a": "Başlangıç menüsü: zorluk seçimi ve seviye bazlı liderlik tablosu."
-        },
-        {
-          "d": "blok_03_diller.png",
-          "a": "Dil menüsü: on dil arasında anında geçiş."
-        },
-        {
-          "d": "blok_04_istatistik.png",
-          "a": "İstatistikler: oynanan oyun, toplam satır ve seviye bazlı rekorlar."
-        }
-      ]
-    },
-    {
-      "slug": "yilan",
-      "ad": "Yılan",
-      "etiket": "TARAYICI OYUNU · ÜCRETSİZ",
-      "ikon": "yilan.png",
-      "storeId": "",
-      "fiyat": "Ücretsiz",
-      "surum": "",
-      "tur": "oyun",
-      "sayfa": "/oyunlar/yilan/",
-      "oyunBag": "/oyunlar/yilan/",
-      "kisa": "Klasik yılan oyunu. Kurulum gerektirmez, doğrudan tarayıcıda çalışır.",
-      "ozellikler": []
-    }
+ "marka": {
+  "ad": "USUL365",
+  "baslik": "Doğrulanmış bilgiyle çalışan yazılımlar",
+  "ustetiket": "USUL365 — Windows Uygulamaları & Yazılım Geliştirme",
+  "girisMetni": "USUL365, arka planında kaynak doğrulama ve bilgi mühendisliği yatan uygulamalar geliştirir. Ürünler yapay zekâ destekli bir geliştirme hattıyla üretilir ve doğruluk gerektiren her veri resmî kaynağıyla karşılaştırılır. Bugün Windows üzerindeyiz; sırada Google Play ve Apple platformları var.",
+  "slogan": "USUL365 · Yazılım ve Bilgi Sistemleri",
+  "eposta": "destek@usul365.com",
+  "ilkeler": [
+   {
+    "b": "Doğrulanmış kaynak",
+    "a": "Doğruluk gerektiren her veri resmî kaynağıyla karşılaştırılır. Tahmin değil, kanıt."
+   },
+   {
+    "b": "Veri toplamaz",
+    "a": "Kullanım verisi, konum ya da kişisel bilgi toplanmaz. Ayarlarınız yalnızca kendi cihazınızda kalır."
+   },
+   {
+    "b": "Platformdan bağımsız",
+    "a": "Aynı motor farklı platformlara taşınır. Windows yayında, Google Play hazırlıkta."
+   }
   ]
+ },
+ "urunler": [
+  {
+   "slug": "guard",
+   "ad": "USUL365 Sürücü ve Donanım",
+   "etiket": "TANILAMA VE BAKIM",
+   "ikon": "guard.png",
+   "storeId": "9pf0xqkv3dft",
+   "fiyat": "250 TL",
+   "surum": "1.0.4.0",
+   "tur": "uygulama",
+   "sayfa": "/uygulamalar/guard/",
+   "kisa": "Aygıtlarınızı ve sürücülerini tek ekranda listeler; hangi sürücünün kaç gündür güncellenmediğini gösterir ve üreticinin kendi sürücü sayfasına yönlendirir. Yazıcı ve sorunlu aygıt tespiti, disk ve klasör sağlığı. 30 gün ücretsiz denenebilir.",
+   "ozellikler": [
+    {
+     "b": "Cihaza özel sürücü rehberi",
+     "a": "Her aygıtın sürücü sürümü ve yaşı görünür. Güncelleme gerekiyorsa üreticinin kendi sayfasına yönlendirilirsiniz; Guard sürücüyü kendisi kurmaz."
+    },
+    {
+     "b": "Donanım envanteri",
+     "a": "İşlemci, bellek, disk, ekran kartı, yazıcı ve bağlı aygıtlar listelenir; sorunlu aygıtlar işaretlenir."
+    },
+    {
+     "b": "Klasör sağlığı taraması",
+     "a": "Büyüyen klasörler ve yer kaplayan dosyalar tespit edilir."
+    },
+    {
+     "b": "Onaylı tedavi",
+     "a": "Hiçbir dosya siz onaylamadan taşınmaz. Her işlem kayıt altına alınır ve geri alınabilir."
+    },
+    {
+     "b": "Korunan dosya listesi",
+     "a": "Sistem klasörleri, posta arşivleri ve tarayıcı verileri asla dokunulmaz listesindedir; kendi desenlerinizi ekleyebilirsiniz."
+    },
+    {
+     "b": "Delta ve trend",
+     "a": "Bilgisayarınızın durumu zaman içinde nasıl değişmiş, karşılaştırmalı olarak görürsünüz."
+    }
+   ],
+   "gorseller": [
+    {
+     "d": "01_genel_bakis.png",
+     "a": "Genel Bakış: disk sağlığı, program yükü, güvenlik ve kaynak kullanımı tek sistem skorunda toplanır; en zayıf halka listenin başında görünür."
+    },
+    {
+     "d": "03_klasor_saglik.png",
+     "a": "Klasör sağlığı taraması: taranacak klasör, sonuç sayısı ve uyarı eşiği seçilir; büyüyen klasörler ve yer kaplayan dosyalar bulunur."
+    },
+    {
+     "d": "04_delta_trend.png",
+     "a": "Delta ve trend: iki tarama arasındaki fark ve bilgisayarın zaman içindeki değişimi karşılaştırmalı olarak gösterilir."
+    }
+   ]
+  },
+  {
+   "slug": "namaz-vakti",
+   "ad": "USUL365 Namaz Vakti",
+   "etiket": "VAKİT VE TAKVİM",
+   "ikon": "namaz-vakti.png",
+   "storeId": "9MWCJZHF6L2W",
+   "fiyat": "250 TL",
+   "surum": "1.0.4.0",
+   "tur": "uygulama",
+   "sayfa": "/uygulamalar/namaz-vakti/",
+   "kisa": "Beş vakit namaz, imsak ve güneş doğuşu; Diyanet resmî takviminden okunan hicrî tarih, yaklaşan dinî günler, kıble açısı ve vakit hatırlatmaları.",
+   "ozellikler": [
+    {
+     "b": "Beş vakit namaz, imsak ve güneş",
+     "a": "Sonraki vakte kalan süre saniye saniye işler; yaklaşan vakit satırı kendiliğinden vurgulanır."
+    },
+    {
+     "b": "Çevrimdışı hesaplama",
+     "a": "Vakitler cihazınızda astronomik olarak hesaplanır; internet bağlantısı gerekmez."
+    },
+    {
+     "b": "Diyanet temkin süreleriyle uyumlu",
+     "a": "Türkiye'de kullanılan hesaplama yöntemi ve resmî temkin süreleri uygulanır."
+    },
+    {
+     "b": "Resmî hicrî takvim",
+     "a": "Hicrî tarih ve dinî günler Diyanet'in yayımladığı resmî takvimden okunur, hesaplamaya bırakılmaz."
+    },
+    {
+     "b": "Kandil ve dinî gün uyarıları",
+     "a": "Yaklaşan kandiller, üç aylar, Ramazan ve bayramlar; kandil gecesinin bir önceki akşam başladığı açıkça belirtilir."
+    },
+    {
+     "b": "Vakit hatırlatmaları",
+     "a": "Vakit girmeden önce hazırlık, vakit çıkmadan önce 'kaçırmayın' ikazı. Süreleri siz belirlersiniz."
+    },
+    {
+     "b": "Günün içeriği",
+     "a": "Her gün bir âyet ve bir hadis, kaynak künyeleriyle birlikte. Metinler Diyanet İşleri Başkanlığı'nın kendi yayınından alınır. Kandil günlerinde içerik o güne göre değişir ve üç gün önceden görünmeye başlar."
+    },
+    {
+     "b": "Kıble ve tablolar",
+     "a": "Kıble açısı, Kâbe mesafesi; haftalık, aylık ve yıllık vakit tabloları."
+    }
+   ],
+   "gorseller": [
+    {
+     "d": "01_genis_gorunum.png",
+     "a": "Geniş görünüm: solda vakit listesi ve geri sayım, sağda günün ayeti, yaklaşan dinî günler ve hicrî takvim."
+    },
+    {
+     "d": "02_sade_gorunum.png",
+     "a": "Sade görünüm: yalnız vakitler ve kalan süre; ekranda az yer kaplaması istendiğinde."
+    },
+    {
+     "d": "03_ne_sunuyor.png",
+     "a": "Haftalık tablo: tarih, gün adı ve hicrî karşılığıyla birlikte yedi günün vakitleri."
+    },
+    {
+     "d": "04_nasil_calisir.png",
+     "a": "Bilgi sekmesi: kıble açısı, Kâbe mesafesi, astronomik doğuş-batış ve uygulama sürümü."
+    }
+   ]
+  },
+  {
+   "slug": "hesappro",
+   "ad": "USUL365 HesapPro",
+   "etiket": "HESAP VE FİNANS",
+   "ikon": "hesappro.png",
+   "storeId": "9p9rf8sd20sj",
+   "fiyat": "250 TL",
+   "surum": "1.0.1.0",
+   "tur": "uygulama",
+   "sayfa": "/uygulamalar/hesappro/",
+   "kisa": "Standart, bilimsel ve programcı modları; kesir hesabı, KDV + ÖTV, kredi taksidi, faiz ve kâr marjı. Türkiye sayı biçimiyle çalışır. 30 gün ücretsiz denenebilir.",
+   "ozellikler": [
+    {
+     "b": "Üç hesap modu",
+     "a": "Standart, bilimsel ve programcı modları tek pencerede."
+    },
+    {
+     "b": "Kesir modu",
+     "a": "3/4 + 5/6 yazın, sonuç sadeleşmiş kesir olarak gelir: 19/12. Altında ondalık karşılığı ve tam sayılı hâli görünür."
+    },
+    {
+     "b": "Bilimsel işlemler",
+     "a": "Trigonometri, logaritma, üs, kök, pi ve e; kapanmamış parantez uyarıyla belirtilir."
+    },
+    {
+     "b": "KDV ve ÖTV birlikte",
+     "a": "Matrah, ÖTV, KDV ve toplam vergi yükü tek hesapta. Oranı listeden seçin ya da kendiniz girin."
+    },
+    {
+     "b": "İş ve finans sekmesi",
+     "a": "Kredi taksidi, faiz, kâr marjı, başabaş noktası ve ROI hesapları."
+    },
+    {
+     "b": "Taban çevirme",
+     "a": "İkilik, sekizlik, onluk ve onaltılık sistemler arasında dönüşüm."
+    },
+    {
+     "b": "Türkiye sayı biçimi",
+     "a": "Binlik ayracı yazarken kendiliğinden konur, ondalık virgülle çalışır."
+    },
+    {
+     "b": "Türkçe ve İngilizce",
+     "a": "Dil arayüzden anında değişir."
+    }
+   ],
+   "gorseller": [
+    {
+     "d": "01_standart.png",
+     "a": "Standart mod: dört işlem, binlik ayracı yazarken kendiliğinden konuyor, geçmiş paneli sağda."
+    },
+    {
+     "d": "02_vergi_kdv_otv.png",
+     "a": "Vergi sekmesi: matrah, ÖTV, KDV ve toplam vergi yükü tek hesapta; oranı listeden seçin ya da kendiniz girin."
+    },
+    {
+     "d": "03_kesir.png",
+     "a": "Kesir modu: 3/4 + 5/6 yazıldığında sonuç sadeleşmiş kesir olarak gelir, altında ondalık karşılığı ve tam sayılı hâli görünür."
+    },
+    {
+     "d": "04_bilimsel.png",
+     "a": "Bilimsel mod: trigonometri, logaritma, üs, kök, pi ve e; kapanmamış parantez uyarıyla belirtiliyor."
+    },
+    {
+     "d": "05_yardim_f1.png",
+     "a": "F1 yardım penceresi: her sekmenin ne yaptığı ve örnek kullanımlar uygulamanın içinde."
+    }
+   ]
+  },
+  {
+   "slug": "blok-dusur",
+   "ad": "Blok Düşür",
+   "etiket": "OYUN",
+   "ikon": "blok.png",
+   "storeId": "9n14sf0jmd4j",
+   "fiyat": "100 TL",
+   "surum": "1.0.1.0",
+   "tur": "oyun",
+   "sayfa": "/uygulamalar/blok-dusur/",
+   "oyunBag": "/oyunlar/blok-dusur/",
+   "kisa": "Klasik blok yerleştirme oyunu. On dilde arayüz, üç zorluk seviyesi ve kalıcı istatistikler. Windows sürümü Microsoft Store'da ve 30 gün ücretsiz denenebilir; tarayıcı sürümü tamamen ücretsiz.",
+   "ozellikler": [
+    {
+     "b": "Üç zorluk seviyesi",
+     "a": "Kolay, Normal ve Usta; her seviyenin kendi liderlik tablosu var."
+    },
+    {
+     "b": "Kalıcı istatistikler",
+     "a": "Skorlarınız ve rekorlarınız bilgisayarınızda saklanır, uygulama güncellense de korunur."
+    },
+    {
+     "b": "On dilde arayüz",
+     "a": "Türkçe, İngilizce, Arapça, Japonca dahil on dil."
+    },
+    {
+     "b": "Tarayıcı sürümü",
+     "a": "Kurulum yapmadan usul365.com üzerinden de oynanabilir."
+    }
+   ],
+   "gorseller": [
+    {
+     "d": "blok_01_oyun_ici.png",
+     "a": "Oyun ekranı: skor, seviye, satır sayısı ve sıradaki blok yan panelde."
+    },
+    {
+     "d": "blok_02_menu.png",
+     "a": "Başlangıç menüsü: zorluk seçimi ve seviye bazlı liderlik tablosu."
+    },
+    {
+     "d": "blok_03_diller.png",
+     "a": "Dil menüsü: on dil arasında anında geçiş."
+    },
+    {
+     "d": "blok_04_istatistik.png",
+     "a": "İstatistikler: oynanan oyun, toplam satır ve seviye bazlı rekorlar."
+    }
+   ]
+  },
+  {
+   "slug": "yilan",
+   "ad": "Yılan",
+   "etiket": "TARAYICI OYUNU · ÜCRETSİZ",
+   "ikon": "yilan.png",
+   "storeId": "",
+   "fiyat": "Ücretsiz",
+   "surum": "",
+   "tur": "oyun",
+   "sayfa": "/oyunlar/yilan/",
+   "oyunBag": "/oyunlar/yilan/",
+   "kisa": "Klasik yılan oyunu. Kurulum gerektirmez, doğrudan tarayıcıda çalışır.",
+   "ozellikler": []
+  }
+ ]
 }
