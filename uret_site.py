@@ -55,8 +55,9 @@ def yaz(yol, s):
     p.write_text(s, encoding="utf-8"); print("  %-42s %6d bayt" % (yol, len(s.encode())))
 
 def kart(u, tarayici=False):
-    v = surum(u["slug"], u.get("surum"))
-    vt = (" &middot; v" + e(v)) if v else ""
+    # Kartta surum GOSTERILMEZ (Yusuf, 19.08): ziyaretciye bir sey soylemiyor,
+    # urunun bakimda oldugunu sayfa altindaki surum gecmisi zaten tarihleriyle anlatiyor.
+    vt = ""
     if tarayici:
         bag = '<a class="tumkart" href="%s">Oyna &#8594;</a>' % u["oyunBag"]
     else:
