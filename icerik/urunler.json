@@ -28,34 +28,46 @@
       "etiket": "TANILAMA VE BAKIM",
       "ikon": "guard.png",
       "storeId": "9pf0xqkv3dft",
-      "fiyat": "250 TL",
+      "fiyat": "509 TL",
       "tur": "uygulama",
       "sayfa": "/uygulamalar/guard/",
-      "kisa": "Aygıtlarınızı ve sürücülerini tek ekranda listeler; hangi sürücünün kaç gündür güncellenmediğini gösterir ve üreticinin kendi sürücü sayfasına yönlendirir. Yazıcı ve sorunlu aygıt tespiti, disk ve klasör sağlığı. 30 gün ücretsiz denenebilir.",
+      "kisa": "Bilgisayarınızın parçalarını, ekran kartı ve ağ kartı sürücülerinin sürüm ve tarihini, yazıcı ve aygıt durumunu gösterir; Windows Update'i ve anakart üreticisinin destek sayfasını tek tıkla açar. Kurulu programların bekleyen güncellemelerini listeler, onayınızla yükseltir. Disk ve klasör sağlığı, kopya dosyalar. 30 gün ücretsiz denenebilir.",
       "ozellikler": [
         {
-          "b": "Cihaza özel sürücü rehberi",
-          "a": "Her aygıtın sürücü sürümü ve yaşı görünür. Güncelleme gerekiyorsa üreticinin kendi sayfasına yönlendirilirsiniz; Guard sürücüyü kendisi kurmaz."
+          "b": "Bilgisayar bilgileri",
+          "a": "İşlemci, ekran kartı, bellek, depolama, ağ kartı, BIOS ve Windows tek ekranda; ekran kartı ve ağ kartı sürücülerinin sürümü ve tarihi görünür. Windows Update ve anakart üreticisinin destek sayfası tek tıkla açılır; Guard sürücü kurmaz."
         },
         {
-          "b": "Donanım envanteri",
-          "a": "İşlemci, bellek, disk, ekran kartı, yazıcı ve bağlı aygıtlar listelenir; sorunlu aygıtlar işaretlenir."
+          "b": "Sistem raporu",
+          "a": "Yazıcılar (hazır, çevrimdışı ya da sürücüsü kurulu ama bağlı değil), ses aygıtları, şu an bağlı olmayan aygıtlar ve disklerin sağlık durumu tek raporda; Kopyala ile destek isterken paylaşabilirsiniz."
         },
         {
-          "b": "Klasör sağlığı taraması",
-          "a": "Büyüyen klasörler ve yer kaplayan dosyalar tespit edilir."
+          "b": "Program güncellemeleri",
+          "a": "Kurulu programların bekleyen güncellemeleri winget (Windows Paket Yöneticisi) üzerinden listelenir; her biri için neden, kazanç, risk ve geri dönüş yolu yazılır. Yalnız sizin seçip onayladığınız program yükseltilir. winget, Microsoft'un Uygulama Yükleyicisi ile gelir."
         },
         {
-          "b": "Onaylı tedavi",
+          "b": "Dosya taraması",
+          "a": "Seçtiğiniz klasördeki büyük dosyalar bulunur ve klasörün sağlık puanı çıkarılır; sistem klasörleri ve korunan dosyalar hiçbir zaman önerilmez."
+        },
+        {
+          "b": "Klasör kırılımı",
+          "a": "Son taramanın alt klasörleri, alt klasörler dahil boyutları ve en büyük dosyalarıyla ağaç halinde görünür; yer kaplayan klasörler hemen fark edilir."
+        },
+        {
+          "b": "Kopya dosyalar",
+          "a": "Aynı çekirdek adı taşıyan kopya ve yedek dosya kümeleri bulunur. Bir kümedeki dosyaların hepsi kopya olmayabilir; taşımadan önce kümeyi inceleyebilirsiniz."
+        },
+        {
+          "b": "Temizlik önerileri",
           "a": "Hiçbir dosya siz onaylamadan taşınmaz. Her işlem kayıt altına alınır ve geri alınabilir."
         },
         {
           "b": "Korunan dosya listesi",
-          "a": "Sistem klasörleri, posta arşivleri ve tarayıcı verileri asla dokunulmaz listesindedir; kendi desenlerinizi ekleyebilirsiniz."
+          "a": "Sistem klasörleri, uygulama verileri, Outlook posta arşivleri, sanal diskler ve tarayıcı verileri asla dokunulmaz listesindedir; bunlar hiçbir zaman önerilmez ve taşınmaz."
         },
         {
-          "b": "Delta ve trend",
-          "a": "Bilgisayarınızın durumu zaman içinde nasıl değişmiş, karşılaştırmalı olarak görürsünüz."
+          "b": "Değişim geçmişi",
+          "a": "Her taramanın dosya sayısı, boyutu ve sağlık puanı, aynı klasörün bir önceki taramasına göre değişimiyle listelenir; klasörlerinizin zaman içinde nasıl değiştiğini görürsünüz."
         }
       ],
       "gorseller": [

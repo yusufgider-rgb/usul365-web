@@ -7,7 +7,7 @@
   ];
   var ALT = [
     ["Ürünler", [
-      ["Guard",       "/uygulamalar/guard/"],
+      ["Sürücü ve Donanım", "/uygulamalar/guard/"],
       ["Namaz Vakti", "/uygulamalar/namaz-vakti/"],
       ["HesapPro",    "/#uygulamalar"],
       ["Blok Düşür",  "/oyunlar/blok-dusur/"]

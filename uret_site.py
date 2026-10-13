@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 """USUL365 site ureticisi. Sayfalar ELLE YAZILMAZ.
 Kaynak: icerik/urunler.json + her urunun 07_surum_gecmisi/CHANGELOG.md + VERSION.txt
+Kullanim kilavuzu (Guard): urunun ui/help_dialog.py (YARDIM_BOLUMLERI) + veri/metin.db - uygulamanin F1 yardimiyla tek kaynak
 Calistirma: python uret_site.py"""
-import json, html, re
+import ast, json, html, re, sqlite3
 from datetime import datetime
 from pathlib import Path
 
@@ -90,6 +91,61 @@ yaz("index.html", BAS % (e(M["ad"])+" — "+e(M["baslik"]), e(M["girisMetni"][:1
           "".join(kart(u) for u in oyunS)),
     bolum("playables", "Google Playables", "Tarayıcıda doğrudan oynanan sürümler; Google Playables için hazırlanıyor.",
           "".join(kart(u, True) for u in oyunT))) + SON)
+
+# --- KULLANIM KILAVUZU (12.10 site bakimi 2; gorev #314 #319, hukum Yusuf 12.10 14:10 H16 a) ---
+# Kilavuz ELLE YAZILMAZ: bolum listesi urunun Yardim (F1) penceresinden (ui/help_dialog.py YARDIM_BOLUMLERI + YER_TUTUCU,
+# ast ile okunur - kod kosturulmaz), metinler urunun veri/metin.db'sinden (TR). Eksik anahtar sessiz dusmez: uretim durur.
+# Urun sayfasindaki 'Kullanim kilavuzu' dugmesi bu dosyaya bakar - URUN SAYFALARI'ndan once uretilir.
+KILAVUZ = {"guard": MS/"01_USUL365_Guard/gelistirme/USUL365_Guard_v1"}
+KLSTIL = ('<style>.klv{max-width:880px;margin:0 auto;padding:0 20px 8px}.klv .hero{padding:46px 0 30px}'
+ '.kkonu{background:var(--kart);border:1px solid var(--cizgi);border-radius:14px;padding:14px 20px 12px;'
+ 'margin:26px 0 6px;columns:2;column-gap:32px}'
+ '.kkonu b{display:block;font-family:"Space Mono",monospace;font-size:10.5px;letter-spacing:1.6px;'
+ 'text-transform:uppercase;color:var(--soluk);margin:8px 0 2px;break-after:avoid}'
+ '.kkonu a{display:block;font-size:14.5px;padding:2px 0}.kkonu a:hover{color:var(--altin)}'
+ '.kgrup{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;'
+ 'color:var(--altin);margin:30px 0 0}'
+ '.kb{background:var(--kart);border:1px solid var(--cizgi);border-radius:14px;padding:4px 22px 14px;'
+ 'margin-top:12px;scroll-margin-top:76px}'
+ '.kb h2{font-size:19px;margin:16px 0 6px;padding-left:12px;border-left:3px solid var(--altin)}'
+ '.kb p{margin:8px 0;font-size:15px;line-height:1.7}'
+ '@media(max-width:820px){.kkonu{columns:1}}</style>')
+
+def yardim_listesi(kok):
+    d = {}
+    for n in ast.parse((kok/"ui"/"help_dialog.py").read_text(encoding="utf-8")).body:
+        if isinstance(n, ast.Assign) and len(n.targets) == 1 and getattr(n.targets[0], "id", "") in ("YARDIM_BOLUMLERI", "YER_TUTUCU"):
+            d[n.targets[0].id] = ast.literal_eval(n.value)
+    return d["YARDIM_BOLUMLERI"], d["YER_TUTUCU"]
+
+def yardim_metni(kok):
+    k = sqlite3.connect("file:%s?mode=ro" % (kok/"veri"/"metin.db"), uri=True)
+    try:
+        return dict(k.execute("SELECT anahtar, deger FROM metin WHERE dil='TR'"))
+    finally:
+        k.close()
+
+def kilavuz(u, kok):
+    v = surum(u["slug"], u.get("surum"))
+    bol, yer = yardim_listesi(kok)
+    T = yardim_metni(kok)
+    konu, gov = [], []
+    for b, g in bol:
+        if b == "__grup__":
+            konu.append("<b>%s</b>" % e(T[g])); gov.append('<div class="kgrup">%s</div>' % e(T[g])); continue
+        m = T[g].format(surum=v, **{a: T[x] for a, x in yer[g].items()}) if g in yer else T[g]
+        konu.append('<a href="#%s">%s</a>' % (g[4:], e(T[b])))
+        gov.append('<section class="kb" id="%s"><h2>%s</h2><p>%s</p></section>' % (g[4:], e(T[b]), e(m)))
+    ozet = "%s kullanım kılavuzu: bölümler menüdeki sırasıyla, uygulamanın yardım metinlerinden." % u["ad"]
+    yaz("uygulamalar/%s/yardim.html" % u["slug"], BAS % ("Kullanım kılavuzu — " + e(u["ad"]), e(ozet[:150])) + KLSTIL +
+      '<div class="en"><div class="klv"><section class="hero"><div class="kucuk">%s &middot; v%s</div>'
+      '<h1>Kullanım kılavuzu</h1><p>Bölümler uygulamanın menüsüyle aynı sıradadır. Uygulamada yardım, menüdeki %s ile '
+      'açılır.</p><div class="dbtnler"><a class="dbtn ikinci" href="%s">&#8592; Ürün sayfası</a></div></section>'
+      '<nav class="kkonu">%s</nav>%s<div class="uretim">Uygulamanın yardım metinlerinden üretildi &middot; Son üretim: %s</div>'
+      '</div></div>' % (e(u["ad"]), e(v), e(T["yardim"]), u["sayfa"], "".join(konu), "".join(gov), Z) + SON)
+
+for u in U:
+    if u["slug"] in KILAVUZ: kilavuz(u, KILAVUZ[u["slug"]])
 
 # --- URUN SAYFALARI ---
 for u in U:
