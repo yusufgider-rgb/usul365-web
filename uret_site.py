@@ -96,7 +96,7 @@ yaz("index.html", BAS % (e(M["ad"])+" — "+e(M["baslik"]), e(M["girisMetni"][:1
 # Kilavuz ELLE YAZILMAZ: bolum listesi urunun Yardim (F1) penceresinden (ui/help_dialog.py YARDIM_BOLUMLERI + YER_TUTUCU,
 # ast ile okunur - kod kosturulmaz), metinler urunun veri/metin.db'sinden (TR). Eksik anahtar sessiz dusmez: uretim durur.
 # Urun sayfasindaki 'Kullanim kilavuzu' dugmesi bu dosyaya bakar - URUN SAYFALARI'ndan once uretilir.
-KILAVUZ = {"guard": MS/"01_USUL365_Guard/gelistirme/USUL365_Guard_v1"}
+KILAVUZ = {"guard": MS/"01_USUL365_Guard"}
 KLSTIL = ('<style>.klv{max-width:880px;margin:0 auto;padding:0 20px 8px}.klv .hero{padding:46px 0 30px}'
  '.kkonu{background:var(--kart);border:1px solid var(--cizgi);border-radius:14px;padding:14px 20px 12px;'
  'margin:26px 0 6px;columns:2;column-gap:32px}'
