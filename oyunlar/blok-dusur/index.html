@@ -2,7 +2,6 @@
 <html lang="tr">
 <head>
 <script src="https://www.youtube.com/game_api/v1"></script>
-<script src="https://accounts.google.com/gsi/client" async defer></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Blok Dusur</title>
@@ -73,11 +72,6 @@
     border-radius: 8px; padding: 6px 14px; font-size: 13px; cursor: pointer;
   }
   .diffBtn.selected { background: #2ee6d6; color: #06080f; border-color: #2ee6d6; font-weight: 700; }
-  .lbTab {
-    background: none; border: none; border-bottom: 2px solid transparent;
-    color: #6b7180; padding: 4px 10px; font-size: 12px; cursor: pointer;
-  }
-  .lbTab.selected { color: #eef0f6; border-bottom-color: #2ee6d6; font-weight: 700; }
   .overlayLabel {
     font-size: 11px; color: #6b7180; letter-spacing: .04em; text-transform: uppercase;
   }
@@ -142,7 +136,7 @@
     <div class="metaRow"><span>Zorluk:</span> <b id="statDifficulty">Normal</b></div>
     <div class="metaRow"><span>Ses:</span> <b id="statSes">Acik</b></div>
 
-    <div style="margin-top:12px;"><a href="istatistikler.html" style="color:#2ee6d6;font-size:13px;text-decoration:none;">&#128202; Tum Oyuncu Istatistikleri</a></div><div id="kbHints">
+    <div id="kbHints">
       Sol/Sag: hareket &middot; Yukari: dondur<br>
       Asagi: dusur &middot; Bosluk: sert dusur<br>
       Shift: beklet &middot; P: duraklat
@@ -159,30 +153,6 @@
     <button class="diffBtn" data-diff="usta">Usta</button>
   </div>
   <button id="startBtn" autofocus>Basla</button>
-  <div id="scoreSubmitRow" style="display:none;margin-top:10px;">
-    <div id="g_id_onload"
-      data-client_id="370152316118-ccj4oeuh0kima88vjffejmqjdkahcq6u.apps.googleusercontent.com"
-      data-callback="handleGoogleSignIn"
-      data-auto_prompt="false">
-    </div>
-    <div id="googleSignInBtn" class="g_id_signin"
-      data-type="standard" data-size="medium" data-theme="filled_black"
-      data-text="signin_with" data-shape="pill">
-    </div>
-    <div id="signedInAs" style="display:none;color:#9aa1b5;font-size:13px;margin:8px 0;">
-      Giris yapildi: <b id="signedInName" style="color:#eef0f6;"></b>
-      <button id="submitScoreBtn" style="margin-left:10px;">Skoru Gonder</button>
-    </div>
-  </div>
-  <div id="leaderboardBox" style="display:none;margin-top:16px;max-width:320px;">
-    <div class="overlayLabel" style="margin-bottom:6px;">Liderlik Tablosu</div>
-    <div id="leaderboardTabs" style="display:flex;gap:6px;justify-content:center;margin-bottom:8px;">
-      <button class="lbTab selected" data-diff="kolay">Kolay</button>
-      <button class="lbTab" data-diff="normal">Normal</button>
-      <button class="lbTab" data-diff="usta">Usta</button>
-    </div>
-    <ol id="leaderboardList" style="text-align:left;color:#9aa1b5;font-size:13px;padding-left:24px;"></ol>
-  </div>
 </div><script>
 (function(){
   var COLS = 10, ROWS = 18;
@@ -526,15 +496,8 @@
     document.getElementById('pEnYuksek').textContent = enYuksek;
 
     if (typeof ytgame !== 'undefined' && ytgame.IN_PLAYABLES_ENV) {
-      // YouTube Playables ortami: kendi resmi skor sistemini kullan, bizim liderlik tablomuzu gizle
-      document.getElementById('scoreSubmitRow').style.display = 'none';
-      document.getElementById('leaderboardBox').style.display = 'none';
+      // YouTube Playables ortami: kendi resmi skor sistemi; bagimsiz web'de skor yalniz cihazda (localStorage) - #359
       ytgame.engagement.sendScore({ value: score }).catch(function(){});
-    } else {
-      // Bagimsiz web (usul365.com): kendi JSONBin liderlik tablomuzu goster
-      document.getElementById('scoreSubmitRow').style.display = 'block';
-      document.getElementById('leaderboardBox').style.display = 'block';
-      loadLeaderboard(currentLbTab);
     }
   }
 
@@ -546,7 +509,6 @@
     gameOverFlag = false;
     nextQueue = [];
     document.getElementById('diffRow').style.display = 'flex';
-    document.getElementById('scoreSubmitRow').style.display = 'none';
     document.getElementById('statDifficulty').textContent = difficulty.charAt(0).toUpperCase() + difficulty.slice(1);
     document.getElementById('pSkor').textContent = 0;
     document.getElementById('pSeviye').textContent = 1;
@@ -629,96 +591,11 @@
     });
   });
 
-  // ===== Liderlik Tablosu (sadece bagimsiz web icin, JSONBin.io) =====
-  var JSONBIN_BIN_ID = '6a53f60ff5f4af5e2985454e';
-  var JSONBIN_API_KEY = '$2a$10$NO0cAF/OlX2dG3CPqJ78P.1JBTXFYAbEhVn1Bnvtfn5uTwPh0KM4m';
-  var currentLbTab = 'kolay';
-
-  async function loadLeaderboard(diff){
-    currentLbTab = diff;
-    var listEl = document.getElementById('leaderboardList');
-    listEl.innerHTML = '<li>Yukleniyor...</li>';
-    try {
-      var res = await fetch('https://api.jsonbin.io/v3/b/' + JSONBIN_BIN_ID + '/latest', {
-        headers: { 'X-Access-Key': JSONBIN_API_KEY }
-      });
-      var data = await res.json();
-      var kayitlar = (data.record || []).filter(function(k){ return k.diff === diff; });
-      kayitlar.sort(function(a,b){ return b.score - a.score; });
-      kayitlar = kayitlar.slice(0, 10);
-      listEl.innerHTML = '';
-      if (!kayitlar.length){
-        listEl.innerHTML = '<li>Henuz kayit yok - ilk sen ol!</li>';
-        return;
-      }
-      kayitlar.forEach(function(k){
-        var li = document.createElement('li');
-        li.textContent = k.name + ' - ' + k.score;
-        listEl.appendChild(li);
-      });
-    } catch(e){
-      listEl.innerHTML = '<li>Liderlik tablosu yuklenemedi.</li>';
-    }
-  }
-
-  document.querySelectorAll('.lbTab').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      document.querySelectorAll('.lbTab').forEach(function(b){ b.classList.remove('selected'); });
-      btn.classList.add('selected');
-      loadLeaderboard(btn.getAttribute('data-diff'));
-    });
-  });
-
-  var girisYapanKullanici = null;
-
-  window.handleGoogleSignIn = function(response){
-    var payload = JSON.parse(atob(response.credential.split('.')[1]));
-    girisYapanKullanici = { name: payload.name, sub: payload.sub, picture: payload.picture };
-    document.getElementById('googleSignInBtn').style.display = 'none';
-    document.getElementById('signedInAs').style.display = 'block';
-    document.getElementById('signedInName').textContent = payload.name;
-  };
-
-  document.addEventListener('click', async function(e){
-    if (e.target.id !== 'submitScoreBtn') return;
-    if (!girisYapanKullanici){
-      alert('Once Google ile giris yapmalisiniz.');
-      return;
-    }
-    var name = girisYapanKullanici.name;
-    var userId = girisYapanKullanici.sub;
-    var btn = e.target;
-    btn.disabled = true;
-    btn.textContent = 'Gonderiliyor...';
-    try {
-      var res = await fetch('https://api.jsonbin.io/v3/b/' + JSONBIN_BIN_ID + '/latest', {
-        headers: { 'X-Access-Key': JSONBIN_API_KEY }
-      });
-      var data = await res.json();
-      var kayitlar = data.record || [];
-      kayitlar.push({ name: name, userId: userId, score: score, diff: difficulty, tarih: new Date().toISOString() });
-      await fetch('https://api.jsonbin.io/v3/b/' + JSONBIN_BIN_ID, {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json', 'X-Access-Key': JSONBIN_API_KEY },
-        body: JSON.stringify(kayitlar)
-      });
-      btn.textContent = 'Gonderildi!';
-      loadLeaderboard(difficulty);
-    } catch(e){
-      btn.textContent = 'Hata, tekrar dene';
-      btn.disabled = false;
-    }
-  });
-
   if (typeof ytgame !== 'undefined') {
     ytgame.game.firstFrameReady();
     ytgame.game.gameReady();
   }
 
-  if (typeof ytgame === 'undefined' || !ytgame.IN_PLAYABLES_ENV) {
-    document.getElementById('leaderboardBox').style.display = 'block';
-    loadLeaderboard('kolay');
-  }
 })();
 })();
 </script>
